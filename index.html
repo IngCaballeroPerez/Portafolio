@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jose Caballero — Gameplay Programmer & Tools. Industrial MES systems, AI agent orchestration and performance-focused local apps built with Python, Unreal Engine and web technologies.">
+  <title>Jose Caballero · Gameplay Programmer & Tools</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content" data-i18n="skip">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true"><img src="assets/code-window.svg" alt="" width="22" height="22"><span>JC</span></span>
+          <span data-i18n="brand">Jose Caballero</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" hidden data-i18n="menu">Menu</button>
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="#project" data-i18n="nav_projects">Projects</a>
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#skills" data-i18n="nav_skills">Skills</a>
+          <a href="#experience" data-i18n="nav_experience">Experience</a>
+          <a href="#contact" class="nav-contact" data-i18n="nav_contact">Contact</a>
+        </nav>
+        <button class="lang-toggle" type="button" aria-label="Switch language" data-lang-button>
+          <span data-lang-current>EN</span>
+        </button>
+      </div>
+    </header>
+    <main id="content">
+      <section class="hero" id="top">
+        <div class="container">
+          <p class="eyebrow" data-i18n="hero_eyebrow">JOSE CABALLERO · GAMEPLAY PROGRAMMER & TOOLS</p>
+          <h1 data-i18n-html="hero_title">Building systems you can <em>trust.</em></h1>
+          <p class="hero-description" data-i18n="hero_description">Industrial software, AI agent orchestration and performance-focused apps. Here I share my projects, the decisions behind each system and what I learn while shipping them.</p>
+          <div class="actions">
+            <a class="button primary" href="#projects" data-i18n="hero_cta_projects">Explore projects</a>
+            <a class="button secondary" href="#contact" data-i18n="hero_cta_contact">Get in touch</a>
+            <a class="button secondary" href="assets/cv.pdf" download data-i18n="hero_cta_cv">Download CV</a>
+          </div>
+          <div class="intro-card">
+            <div class="intro-identity">
+              <span class="avatar" aria-hidden="true">JC</span>
+              <div>
+                <div class="intro-name" data-i18n="brand">Jose Caballero</div>
+                <div class="intro-role" data-i18n="hero_role">Gameplay Programmer · Unreal Engine & Python</div>
+              </div>
+            </div>
+            <p data-i18n="hero_tagline">From an idea to a system that holds up in production.</p>
+            <a href="#about" data-i18n="hero_approach">See my approach</a>
+          </div>
+          <nav class="section-pills" aria-label="Section shortcuts">
+            <a href="#projects" data-i18n="nav_projects">Projects</a>
+            <a href="#skills" data-i18n="nav_skills">Skills</a>
+            <a href="#experience" data-i18n="nav_experience">Experience</a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="projects_eyebrow">01 / SELECTED WORK</p>
+              <h2 data-i18n-html="projects_title">A selection of <em>my work.</em></h2>
+            </div>
+            <p data-i18n="projects_subtitle">The problem, the decisions and the result behind each build.</p>
+          </div>
+
+          <article class="project featured">
+            <div class="project-media">
+              <figure class="project-gallery">
+                <img id="mesMain" class="project-image" src="assets/mes-requests.webp" alt="" data-i18n-attr="alt:mes_alt_requests" width="1200" height="750" loading="lazy" decoding="async">
+                <div class="gallery-thumbs" role="group" aria-label="Screenshots">
+                  <a href="assets/mes-login.webp" class="thumb" data-full="assets/mes-login.webp"><img src="assets/mes-login.webp" alt="" data-i18n-attr="alt:mes_alt_login" loading="lazy"></a>
+                  <a href="assets/mes-requests.webp" class="thumb is-active" data-full="assets/mes-requests.webp"><img src="assets/mes-requests.webp" alt="" data-i18n-attr="alt:mes_alt_requests" loading="lazy"></a>
+                  <a href="assets/mes-help.webp" class="thumb" data-full="assets/mes-help.webp"><img src="assets/mes-help.webp" alt="" data-i18n-attr="alt:mes_alt_help" loading="lazy"></a>
+                  <a href="assets/mes-password.webp" class="thumb" data-full="assets/mes-password.webp"><img src="assets/mes-password.webp" alt="" data-i18n-attr="alt:mes_alt_password" loading="lazy"></a>
+                  <a href="assets/mes-error.webp" class="thumb" data-full="assets/mes-error.webp"><img src="assets/mes-error.webp" alt="" data-i18n-attr="alt:mes_alt_error" loading="lazy"></a>
+                </div>
+              </figure>
+              <span class="visual-number" aria-hidden="true">01</span>
+            </div>
+            <div class="project-content">
+              <p class="project-type" data-i18n="p1_type">INDUSTRIAL / MES</p>
+              <h3 data-i18n="p1_name">M.E.S — Industrial Manufacturing Execution System</h3>
+              <p data-i18n="p1_summary">Multi-business MES for plant operations: centralised identity, permissions and audit, a Python-served web interface, and a design canvas kept in sync with the repository. Ten active businesses run on the same base.</p>
+              <ul class="tags">
+                <li>Python</li><li>SQLite / Oracle</li><li>HTML·CSS·JS</li><li>PLSQL</li>
+              </ul>
+              <details>
+                <summary data-i18n="project_details">Learn about the project</summary>
+                <div class="project-details">
+                  <dt data-i18n="detail_challenge">The challenge</dt>
+                  <dd data-i18n="p1_challenge">An industrial MES that runs on Windows with no prior installation, centralised control of users, permissions and audit per business, and a decoupled architecture that allows future Oracle integrations without blocking the pilot.</dd>
+                  <dt data-i18n="detail_role">My contribution</dt>
+                  <dd data-i18n="p1_role">Architect, full-stack developer and release owner: SQLite Control Plane, Python backend (auth, authorisation, Root recovery), web interface (hierarchical menu, requests, approvals, MES Config), synced design canvas and Oracle scripts generated without manual editing.</dd>
+                  <dt data-i18n="detail_decision">Technical decision</dt>
+                  <dd data-i18n="p1_decision">Separate design artefacts (canvas.json, .dc.html) from runtime code in a satellite repository with two-way repo-to-canvas sync, so the decision plan and the screens evolve without breaking the pilot.</dd>
+                  <dt data-i18n="detail_result">Result or takeaway</dt>
+                  <dd data-i18n="p1_result">Ten active businesses, real login/logout with mandatory password change, supervisor-to-ADMIN request flow, automated tests in CI/CD and a Windows Portable package with embedded runtime.</dd>
+                  <p><a href="https://github.com/IngCaballeroPerez/M.E.S" rel="noopener" data-i18n="link_repo">View code on GitHub</a></p>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <div class="project-grid">
+            <article class="project">
+              <div class="project-visual visual-lilac">
+                <span class="visual-label" data-i18n="projects_dev_label">AI / 02</span>
+                <div class="capture-placeholder"><span class="capture-icon" aria-hidden="true">{ }</span><span data-i18n="capture_placeholder">[ Your project screenshot ]</span></div>
+                <span class="visual-number" aria-hidden="true">02</span>
+              </div>
+              <div class="project-content">
+                <p class="project-type" data-i18n="p2_type">TOOLS / AI</p>
+                <h3 data-i18n="p2_name">Knight-Plugin 4.3</h3>
+                <p data-i18n="p2_summary">Engineering plugin for Claude, Codex and Qwen that coordinates seven specialised agents with on-demand loading of seventeen specialties, configurable verification and persistent evidence.</p>
+                <ul class="tags"><li>JavaScript</li><li>Node.js ≥22</li><li>Python</li></ul>
+                <details>
+                  <summary data-i18n="project_details">Learn about the project</summary>
+                  <div class="project-details">
+                    <dt data-i18n="detail_challenge">The challenge</dt>
+                    <dd data-i18n="p2_challenge">Unify specialisation, verification and evidence without duplicating configuration across Claude, Codex and Qwen; remove manual checks and automate recovery of interrupted runs.</dd>
+                    <dt data-i18n="detail_role">My contribution</dt>
+                    <dd data-i18n="p2_role">Designed the seven-agent plus seventeen-specialty framework, configurable checks (quick/extended), a lock and recovery system by PID, per-environment adapters and deterministic packaging with SHA-256.</dd>
+                    <dt data-i18n="detail_result">Result or takeaway</dt>
+                    <dd data-i18n="p2_result">Working plugin in Claude Code, Codex and Qwen with no npm dependencies; confirmed recovery of interrupted runs and a deterministic ZIP package with a SHA-256 manifest.</dd>
+                    <p><a href="https://github.com/IngCaballeroPerez/Knight-Plugin" rel="noopener" data-i18n="link_repo">View code on GitHub</a></p>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-visual visual-light">
+                <span class="visual-label" data-i18n="projects_perf_label">PERFORMANCE / 03</span>
+                <div class="capture-placeholder"><span class="capture-icon" aria-hidden="true">( )</span><span data-i18n="capture_placeholder">[ Your project screenshot ]</span></div>
+                <span class="visual-number" aria-hidden="true">03</span>
+              </div>
+              <div class="project-content">
+                <p class="project-type" data-i18n="p3_type">DESKTOP APP</p>
+                <h3 data-i18n="p3_name">LocalChat v0.2.1</h3>
+                <p data-i18n="p3_summary">Fully local desktop messaging (no server, no internet) in Python/Tkinter with SQLite, built as an educational baseline for GUI optimisation and code comprehensibility.</p>
+                <ul class="tags"><li>Python</li><li>Tkinter</li><li>SQLite</li></ul>
+                <details>
+                  <summary data-i18n="project_details">Learn about the project</summary>
+                  <div class="project-details">
+                    <dt data-i18n="detail_challenge">The challenge</dt>
+                    <dd data-i18n="p3_challenge">Prove that a Tkinter GUI scales to many contacts without degradation: eliminate N+1 queries, repeated reconnections and redundant repaints.</dd>
+                    <dt data-i18n="detail_role">My contribution</dt>
+                    <dd data-i18n="p3_role">Redesigned the update pattern to a single query plus cache, a single SQLite connection with RLock and WAL, an in-memory EventBus for multiple windows, history debounce and receipt batching; documented every module.</dd>
+                    <dt data-i18n="detail_result">Result or takeaway</dt>
+                    <dd data-i18n="p3_result">No N+1 queries, multiple windows synced without a server, presence and message state computed without an extra column, and passwords hashed with scrypt (N=2^14).</dd>
+                    <p><a href="https://github.com/IngCaballeroPerez/LocalChat" rel="noopener" data-i18n="link_repo">View code on GitHub</a></p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow" data-i18n="about_eyebrow">02 / ABOUT ME</p>
+            <h2 data-i18n-html="about_title">The person <em>behind the code.</em></h2>
+          </div>
+          <div class="about-copy">
+            <p class="large-text" data-i18n="about_p1">I am a programmer focused on turning real operational needs into solid systems. Although my goal is gameplay programming with Unreal Engine and C++, much of my work is building the systems, tools and pipelines that make teams — and games — run: identity and permissions, request workflows, agent orchestration and performance work.</p>
+            <p data-i18n="about_p2">I enjoy the problems that live at the intersection of design and engineering: how a screen stays clear under real data, how a tool stays intuitive, how a system scales without becoming fragile. I care about clean, maintainable code and about shipping things people can actually use.</p>
+            <div class="approach">
+              <h3 data-i18n="about_approach_title">How I work</h3>
+              <p data-i18n="about_approach">I start by understanding the real need, choose the simplest solution that holds up, and verify it works before moving on. I iterate in small, testable steps, keep design and runtime separated, and leave the code readable for the next person — including future me.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n="skills_eyebrow">03 / SKILLS</p>
+              <h2 data-i18n-html="skills_title">The tools <em>behind the ideas.</em></h2>
+            </div>
+            <p data-i18n="skills_subtitle">Knowledge that shows up in the work, not just on the list.</p>
+          </div>
+          <div class="skills-grid">
+            <article class="skill"><span class="skill-number">01</span><h3 data-i18n="skill1_title">Python & backend</h3><p data-i18n="skill1_desc">SQLite, Oracle/PLSQL, authentication, authorisation and audit; local services and portable runtimes.</p><p class="skill-evidence" data-i18n="skill1_proof">Applied in M.E.S</p></article>
+            <article class="skill"><span class="skill-number">02</span><h3 data-i18n="skill2_title">Interfaces & UX</h3><p data-i18n="skill2_desc">HTML/CSS/JS and Tkinter: clear screens, safe forms and useful error states for real operators.</p><p class="skill-evidence" data-i18n="skill2_proof">Applied in M.E.S and LocalChat</p></article>
+            <article class="skill"><span class="skill-number">03</span><h3 data-i18n="skill3_title">AI & automation</h3><p data-i18n="skill3_desc">Agent orchestration, configurable verification checks and persistent evidence across dev environments.</p><p class="skill-evidence" data-i18n="skill3_proof">Applied in Knight-Plugin</p></article>
+            <article class="skill"><span class="skill-number">04</span><h3 data-i18n="skill4_title">Performance & quality</h3><p data-i18n="skill4_desc">Removing N+1 queries, caching, automated tests, CI/CD and deterministic packaging.</p><p class="skill-evidence" data-i18n="skill4_proof">Applied in LocalChat and M.E.S</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="container experience-grid">
+          <div>
+            <p class="eyebrow" data-i18n="exp_eyebrow">04 / TRAJECTORY</p>
+            <h2 data-i18n-html="exp_title">Learn. Build. <em>Evolve.</em></h2>
+            <p class="section-note" data-i18n="exp_note">What I have learned, and what I have put into practice.</p>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div><span class="timeline-date" data-i18n="exp1_date">[ PERIOD ]</span><span class="entry-kind" data-i18n="exp1_kind">EXPERIENCE</span></div>
+              <div><h3 data-i18n="exp1_role">[ Role or independent activity ]</h3><p class="entry-place" data-i18n="exp1_place">[ Organization or project ]</p><p data-i18n="exp1_desc">[ Responsibilities, contributions and a real result. If you have no work experience yet, replace this block with personal project experience. ]</p></div>
+            </article>
+            <article class="timeline-item">
+              <div><span class="timeline-date" data-i18n="exp2_date">[ PERIOD ]</span><span class="entry-kind" data-i18n="exp2_kind">EDUCATION</span></div>
+              <div><h3 data-i18n="exp2_role">[ Studies or relevant training ]</h3><p class="entry-place" data-i18n="exp2_place">[ Institution or platform ]</p><p data-i18n="exp2_desc">[ Knowledge gained and how you apply it. Include certifications only if you have earned them. ]</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container contact-inner">
+          <div>
+            <p class="eyebrow" data-i18n="contact_eyebrow">05 / CONTACT</p>
+            <h2 data-i18n-html="contact_title">Let us start with <em>a conversation.</em></h2>
+            <p data-i18n="contact_desc">Open to gameplay programming roles, tools engineering and systems work. If your team needs someone who ships reliable software, write to me.</p>
+          </div>
+          <dl class="contact-list">
+            <div><dt data-i18n="contact_email_label">Email</dt><dd><a href="mailto:ing.caballeroperez@gmail.com">ing.caballeroperez@gmail.com</a></dd></div>
+            <div><dt>GitHub</dt><dd><a href="https://github.com/IngCaballeroPerez" rel="noopener">github.com/IngCaballeroPerez</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><span class="pending" data-i18n="contact_linkedin">[ Link to your profile ]</span></dd></div>
+          </dl>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer footer-reveal">
+    <div class="container">
+      <div class="footer-cta">
+        <p class="eyebrow footer-eyebrow" data-i18n="footer_eyebrow">SHALL WE TALK?</p>
+        <h2 class="footer-title" data-i18n-html="footer_title">Let us build something <em>with purpose.</em></h2>
+        <p class="footer-text" data-i18n="footer_text">If you have a project or an idea in mind, write to me and we will build it together.</p>
+        <a class="button footer-button" href="#contact" data-i18n="footer_cta">Start a conversation</a>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="footer-meta">
+        <span>© <span id="year">2026</span> Jose Caballero</span>
+        <span data-i18n="footer_tagline">Gameplay programming & tools portfolio</span>
+        <a href="#top" data-i18n="footer_top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
