@@ -7,10 +7,10 @@ No installs, server, accounts or internet connection required.
 ## Files
 
     portafolio/
-      index.html         Content, projects and contact data (EN by default)
-      css/styles.css     Dark theme, typography, layout, gallery, responsive
-      js/i18n.js         EN/ES dictionary + language detection and toggle
-      js/main.js         Accessible mobile menu, gallery swap, footer year
+      index.html         Page markup (split out of Portafolio.html)
+      css/styles.css     All styles: tokens, layout, components, responsive, print
+      js/i18n.js         ES / EN / zh-CN translations + window.I18N (load first)
+      js/main.js         App: data, rendering, nav, projects, dialogs, carousel, form
       assets/            Your screenshots, CV and icons
       README.md          This guide
 
