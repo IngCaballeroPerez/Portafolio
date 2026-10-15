@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#08080a">
+
+<!--
+  Copyright 2026 Caballero
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<title>404 — Página no encontrada · Jose Luis C.</title>
+<meta name="description" content="La página que buscas no existe o fue movida.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c0c0f'/%3E%3Cpath d='M12.5 10 8 16l4.5 6M19.5 10 24 16l-4.5 6' fill='none' stroke='%238b5cf6' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/latin-400-normal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/latin-600-normal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/latin-700-normal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/jetbrains-mono@latest/latin-400-normal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/jetbrains-mono@latest/latin-500-normal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/noto-sans-sc@latest/chinese-simplified-400-normal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/noto-sans-sc@latest/chinese-simplified-700-normal.min.css">
+
+<script>
+(function () {
+  try {
+    var d = document.documentElement;
+    var th = localStorage.getItem('portfolio.editorial.theme');
+    var ac = localStorage.getItem('portfolio.editorial.accent');
+    var lc = localStorage.getItem('portfolio.locale');
+    if (th === 'light' || th === 'dark') d.setAttribute('data-theme', th);
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) d.setAttribute('data-theme', 'light');
+    if (ac) d.style.setProperty('--accent-h', ac);
+    if (lc === 'en' || lc === 'es' || lc === 'zh-CN') d.setAttribute('lang', lc === 'zh-CN' ? 'zh-CN' : lc);
+    var tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.setAttribute('content', d.getAttribute('data-theme') === 'light' ? '#f7f7fa' : '#08080a');
+  } catch (e) {}
+})();
+</script>
+
+<style>
+:root{
+  --accent-h:265; color-scheme:dark;
+  --bg:#08080a; --bg-1:#0c0c0f; --bg-2:#101014; --bg-3:#15151a; --bg-4:#1b1b22;
+  --fg:#f4f4f6; --fg-2:#b4b4bf; --fg-3:#83838f;
+  --line:#21212a; --line-2:#2e2e3a;
+  --accent:hsl(var(--accent-h) 82% 64%);
+  --accent-2:hsl(var(--accent-h) 92% 78%);
+  --accent-soft:hsl(var(--accent-h) 82% 64% / .14);
+  --accent-line:hsl(var(--accent-h) 82% 64% / .38);
+  --accent-ink:#08080a;
+  --grad-a:hsl(var(--accent-h) 92% 80%);
+  --grad-b:hsl(calc(var(--accent-h) + 46) 90% 72%);
+  --art-line:rgba(255,255,255,.05);
+  --sh-3:0 18px 44px -18px rgba(0,0,0,.8);
+  --r-sm:9px; --r-md:13px; --r-lg:18px; --r-xl:24px; --r-pill:999px;
+  --font-sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --gutter:clamp(1rem,4vw,2.5rem);
+  --e-out:cubic-bezier(.22,1,.36,1); --e-soft:cubic-bezier(.4,0,.2,1);
+  --t-2:220ms; --t-3:340ms; --t-4:520ms;
+}
+[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f7f7fa; --bg-1:#ffffff; --bg-2:#ffffff; --bg-3:#f1f1f6; --bg-4:#e6e6ef;
+  --fg:#14141a; --fg-2:#4c4c5a; --fg-3:#6d6d7c;
+  --line:#e4e4ec; --line-2:#d0d0dd;
+  --accent:hsl(var(--accent-h) 74% 50%);
+  --accent-2:hsl(var(--accent-h) 82% 32%);
+  --accent-soft:hsl(var(--accent-h) 74% 50% / .12);
+  --accent-line:hsl(var(--accent-h) 74% 50% / .40);
+  --accent-ink:#ffffff;
+  --grad-a:hsl(var(--accent-h) 82% 44%);
+  --grad-b:hsl(calc(var(--accent-h) + 46) 76% 38%);
+  --art-line:rgba(20,20,30,.07);
+  --sh-3:0 18px 44px -18px rgba(20,20,30,.24);
+}
+html[lang="zh-CN"]{ --font-sans:'Inter','Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif; }
+html[lang="zh-CN"] body{ line-height:1.85; }
+*,*::before,*::after{ box-sizing:border-box; }
+*{ margin:0; }
+html{ -webkit-text-size-adjust:100%; overflow-x:clip; }
+body{
+  min-height:100vh; min-height:100svh; display:flex; flex-direction:column;
+  font-family:var(--font-sans); line-height:1.65; color:var(--fg); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:clip;
+  transition:background-color var(--t-3) var(--e-soft), color var(--t-3) var(--e-soft);
+}
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; padding:0; }
+button{ font:inherit; background:none; border:0; cursor:pointer; color:inherit; }
+:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:var(--r-sm); }
+.sr-only{ position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; }
+
+.wrap{ width:100%; max-width:75rem; margin-inline:auto; padding-inline:var(--gutter); }
+
+/* barra */
+.bar{ position:relative; z-index:3; height:4.125rem; display:flex; align-items:center;
+  border-bottom:1px solid var(--line); background:var(--bg); }
+.bar__inner{ display:flex; align-items:center; gap:.75rem; width:100%; }
+
+
+.bar__spacer{ margin-left:auto; }
+.icon-btn{ display:inline-flex; align-items:center; justify-content:center; width:2.5rem; height:2.5rem;
+  border-radius:var(--r-sm); background:var(--bg-3); border:1px solid var(--line); color:var(--fg-2); transition:all var(--t-2) var(--e-soft); }
+.icon-btn:hover{ color:var(--fg); border-color:var(--accent-line); background:var(--bg-4); }
+
+/* escenario */
+.stage{ position:relative; flex:1; display:grid; place-items:center; overflow:clip; padding-block:clamp(3rem,8vw,6rem); }
+.stage__ambient,.stage__grid{ position:absolute; inset:0; pointer-events:none; }
+.stage__ambient{ background:
+  radial-gradient(52% 44% at 50% 6%, var(--accent-soft), transparent 72%),
+  radial-gradient(44% 40% at 88% 70%, hsl(calc(var(--accent-h) + 60) 85% 62% / .10), transparent 70%);
+  animation:breathe 20s var(--e-soft) infinite alternate; }
+@keyframes breathe{ from{ transform:scale(1); opacity:.85 } to{ transform:scale(1.08) translateY(-.8rem); opacity:1 } }
+.stage__grid{ background-image:linear-gradient(var(--art-line) 1px,transparent 1px),linear-gradient(90deg,var(--art-line) 1px,transparent 1px);
+  background-size:4rem 4rem;
+  -webkit-mask-image:radial-gradient(66% 58% at 50% 44%,#000 8%,transparent 78%);
+  mask-image:radial-gradient(66% 58% at 50% 44%,#000 8%,transparent 78%); }
+.card{ position:relative; z-index:2; width:100%; max-width:44rem; text-align:center; }
+
+.code{ position:relative; display:inline-block; font-family:var(--font-mono); font-weight:500;
+  font-size:clamp(4.5rem,2rem + 15vw,11rem); line-height:.95; letter-spacing:-.04em;
+  background:linear-gradient(160deg,var(--fg) 10%,var(--grad-a) 55%,var(--grad-b) 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:rise var(--t-4) var(--e-out) both; }
+.code::after{ content:""; position:absolute; left:50%; bottom:-.35rem; transform:translateX(-50%);
+  width:min(70%,18rem); height:1px; background:linear-gradient(90deg,transparent,var(--accent-line),transparent); }
+@keyframes rise{ from{ opacity:0; transform:translateY(1.4rem) } to{ opacity:1; transform:none } }
+
+.term{ margin:2.2rem auto 0; max-width:34rem; text-align:left; border-radius:var(--r-lg);
+  background:var(--bg-2); border:1px solid var(--line); box-shadow:var(--sh-3); overflow:hidden;
+  animation:rise var(--t-4) .1s var(--e-out) both; }
+.term__bar{ display:flex; align-items:center; gap:.4rem; padding:.6rem .85rem; background:var(--bg-3); border-bottom:1px solid var(--line); }
+.term__dot{ width:.6rem; height:.6rem; border-radius:50%; background:var(--line-2); }
+.term__dot:nth-child(1){ background:#ff5f57 } .term__dot:nth-child(2){ background:#febc2e } .term__dot:nth-child(3){ background:#28c840 }
+.term__path{ margin-left:.5rem; font-family:var(--font-mono); font-size:.7rem; color:var(--fg-3); overflow-wrap:anywhere; }
+.term__body{ padding:1rem 1.1rem 1.2rem; font-family:var(--font-mono); font-size:clamp(.74rem,.7rem + .2vw,.84rem); line-height:1.85; color:var(--fg-2); }
+.term__body .p{ color:var(--accent-2); }
+.term__body .ok{ color:#34d399 }
+[data-theme="light"] .term__body .ok{ color:#0d8f61 }
+.term__body .err{ color:#f87171 }
+[data-theme="light"] .term__body .err{ color:#c02626 }
+.cursor{ display:inline-block; width:.5rem; height:1em; vertical-align:-.15em; background:var(--accent); animation:blink 1.1s steps(1) infinite; }
+@keyframes blink{ 0%,49%{opacity:1} 50%,100%{opacity:0} }
+
+h1{ font-size:clamp(1.5rem,1.15rem + 1.6vw,2.4rem); letter-spacing:-.025em; margin-top:2.2rem;
+  animation:rise var(--t-4) .18s var(--e-out) both; }
+.lead{ margin:.85rem auto 0; max-width:38rem; color:var(--fg-2); font-size:clamp(.95rem,.9rem + .3vw,1.06rem);
+  animation:rise var(--t-4) .24s var(--e-out) both; }
+
+.links{ margin-top:2rem; display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem;
+  animation:rise var(--t-4) .3s var(--e-out) both; }
+.links a{ position:relative; font-size:.9rem; font-weight:600; color:var(--fg-2); padding:.25rem 0; transition:color var(--t-2); }
+.links a::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:1.5px; background:var(--accent);
+  transform:scaleX(0); transform-origin:0 50%; transition:transform var(--t-3) var(--e-out); }
+.links a:hover{ color:var(--fg) } .links a:hover::after{ transform:scaleX(1) }
+
+.actions{ margin-top:2.4rem; display:flex; flex-wrap:wrap; justify-content:center; gap:.75rem;
+  animation:rise var(--t-4) .36s var(--e-out) both; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:.55rem; min-height:2.875rem;
+  padding:.75rem 1.4rem; border-radius:var(--r-md); font-size:.9375rem; font-weight:600;
+  background:var(--bg-3); color:var(--fg); border:1px solid var(--line-2);
+  transition:transform var(--t-2) var(--e-out), background var(--t-2), border-color var(--t-2), box-shadow var(--t-2), filter var(--t-2); }
+.btn:hover{ transform:translateY(-2px) }
+.btn--primary{ background:var(--accent); color:var(--accent-ink); border-color:transparent; }
+.btn--primary:hover{ box-shadow:0 12px 28px -10px var(--accent); filter:brightness(1.07); }
+
+.foot{ position:relative; z-index:2; padding-block:1.5rem; border-top:1px solid var(--line); background:var(--bg-1); }
+.foot__inner{ display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+  font-size:.78rem; color:var(--fg-3); }
+.foot__lic{ display:inline-flex; align-items:center; gap:.4rem; padding:.3rem .7rem; border:1px solid var(--line); border-radius:var(--r-pill); transition:all var(--t-2); }
+.foot__lic:hover{ color:var(--accent-2); border-color:var(--accent-line); }
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important; }
+  .cursor{ animation:none; opacity:1 }
+}
+@media (max-width:30rem){
+  .term__path{ font-size:.62rem }
+  .links{ gap:1rem }
+}
+</style>
+</head>
+
+<body>
+<header class="bar">
+  <div class="wrap bar__inner">
+    <span class="bar__spacer"></span>
+    <button type="button" class="icon-btn" id="themeBtn" aria-pressed="false">
+      <span class="sr-only" id="themeBtnLabel">Cambiar tema</span>
+      <svg class="ic-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="ic-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="stage" id="main">
+  <div class="stage__ambient" aria-hidden="true"></div>
+  <div class="stage__grid" aria-hidden="true"></div>
+
+  <div class="wrap card">
+    <p class="code" aria-hidden="true">404</p>
+    <h1 id="title">Página no encontrada</h1>
+    <p class="lead" id="lead">La ruta que pediste no existe en este servidor. Puede que el enlace esté roto o que la página se haya movido.</p>
+
+    <div class="term" role="img" aria-labelledby="termDesc">
+      <p id="termDesc" class="sr-only">Simulación de terminal mostrando el error 404.</p>
+      <div class="term__bar" aria-hidden="true">
+        <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot"></span>
+        <span class="term__path" id="termPath">~/portfolio</span>
+      </div>
+      <div class="term__body" aria-hidden="true">
+        <div><span class="p">$</span> <span id="cmd">curl -I</span> <span id="cmdUrl">/ruta</span></div>
+        <div><span class="err">HTTP/1.1 404 Not Found</span></div>
+        <div><span id="line3">content-type: text/html; charset=utf-8</span></div>
+        <div><span class="p">$</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+
+    <nav class="links" id="links" aria-labelledby="linksH">
+      <h2 id="linksH" class="sr-only">Enlaces rápidos</h2>
+      <a href="./index.html#about"      data-k="about">Sobre mí</a>
+      <a href="./index.html#skills"     data-k="skills">Habilidades</a>
+      <a href="./experiencia.html" data-k="experience">Experiencia</a>
+      <a href="./index.html#projects"   data-k="projects">Proyectos</a>
+      <a href="./index.html#contact"    data-k="contact">Contacto</a>
+    </nav>
+
+    <div class="actions">
+      <a class="btn btn--primary" href="./index.html">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        <span id="ctaHome">Volver al inicio</span>
+      </a>
+      <button class="btn" type="button" id="backBtn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span id="ctaBack">Página anterior</span>
+      </button>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <span id="copy">© 2026 Jose Luis C.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── i18n mínimo e independiente (es / en / zh-CN) ── */
+  var STR = {
+    es: {
+      title: 'Página no encontrada',
+      lead: 'La ruta que pediste no existe en este servidor. Puede que el enlace esté roto o que la página se haya movido.',
+      cmd: 'curl -I',
+      contentType: 'content-type: text/html; charset=utf-8',
+      themeBtn: 'Cambiar tema', themeOn: 'Tema claro activado', themeOff: 'Tema oscuro activado',
+      linksH: 'Enlaces rápidos',
+      about: 'Sobre mí', skills: 'Habilidades', experience: 'Experiencia', projects: 'Proyectos', contact: 'Contacto',
+      ctaHome: 'Volver al inicio', ctaBack: 'Página anterior',
+      copy: '© {year} Jose Luis C.', home: './index.html'
+    },
+    en: {
+      title: 'Page not found',
+      lead: 'The route you requested does not exist on this server. The link may be broken or the page may have moved.',
+      cmd: 'curl -I',
+      contentType: 'content-type: text/html; charset=utf-8',
+      themeBtn: 'Change theme', themeOn: 'Light theme enabled', themeOff: 'Dark theme enabled',
+      linksH: 'Quick links',
+      about: 'About', skills: 'Skills', experience: 'Experience', projects: 'Projects', contact: 'Contact',
+      ctaHome: 'Back to home', ctaBack: 'Previous page',
+      copy: '© {year} Jose Luis C.', home: './index.html'
+    },
+    'zh-CN': {
+      title: '找不到页面',
+      lead: '你请求的路径在服务器上不存在。链接可能已失效，或页面已被移动。',
+      cmd: 'curl -I',
+      contentType: 'content-type: text/html; charset=utf-8',
+      themeBtn: '切换主题', themeOn: '已启用浅色主题', themeOff: '已启用深色主题',
+      linksH: '快速链接',
+      about: '关于我', skills: '技术栈', experience: '经历', projects: '项目', contact: '联系',
+      ctaHome: '返回首页', ctaBack: '上一页',
+      copy: '© {year} Jose Luis C.', home: './index.html'
+    }
+  };
+
+  function normalize(c) {
+    if (!c) return null;
+    c = String(c).replace(/_/g, '-');
+    if (STR[c]) return c;
+    var l = c.toLowerCase();
+    if (l.indexOf('zh') === 0) return 'zh-CN';
+    var b = l.split('-')[0];
+    return STR[b] ? b : null;
+  }
+  function detect() {
+    var s = null;
+    try { s = localStorage.getItem('portfolio.locale'); } catch (e) {}
+    var n = normalize(s); if (n) return n;
+    var cand = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+    cand.push(document.documentElement.getAttribute('lang'));
+    for (var i = 0; i < cand.length; i++) { var m = normalize(cand[i]); if (m) return m; }
+    return 'es';
+  }
+
+  var loc = detect();
+  var S = STR[loc] || STR.es;
+  document.documentElement.lang = loc === 'zh-CN' ? 'zh-CN' : loc;
+  document.title = '404 — ' + S.title + ' · Jose Luis C.';
+
+  function set(id, txt) { var n = document.getElementById(id); if (n) n.textContent = txt; }
+  set('title', S.title);
+  set('lead', S.lead);
+  set('cmd', S.cmd);
+  set('contentType', S.contentType);
+  set('line3', S.contentType);
+  set('ctaHome', S.ctaHome);
+  set('ctaBack', S.ctaBack);
+  set('copy', S.copy.replace('{year}', new Date().getFullYear()));
+  set('linksH', S.linksH);
+  set('themeBtnLabel', S.themeBtn);
+
+  var links = document.querySelectorAll('#links a');
+  for (var i = 0; i < links.length; i++) {
+    var k = links[i].getAttribute('data-k');
+    if (k && S[k]) links[i].textContent = S[k];
+  }
+
+  var path = document.getElementById('termPath');
+  var url = document.getElementById('cmdUrl');
+  if (path) path.textContent = '~' + decodeURIComponent(location.pathname);
+  if (url) url.textContent = decodeURIComponent(location.pathname + location.search) || '/';
+
+  /* ── tema ── */
+  var btn = document.getElementById('themeBtn');
+  var moon = btn.querySelector('.ic-moon'), sun = btn.querySelector('.ic-sun');
+  function paint() {
+    var light = document.documentElement.getAttribute('data-theme') === 'light';
+    if (moon) moon.hidden = light;
+    if (sun) sun.hidden = !light;
+    btn.setAttribute('aria-pressed', String(light));
+    var lbl = document.getElementById('themeBtnLabel');
+    if (lbl) lbl.textContent = light ? S.themeOn : S.themeOff;
+    var tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.setAttribute('content', light ? '#f7f7fa' : '#08080a');
+  }
+  btn.addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('portfolio.editorial.theme', next); } catch (e) {}
+    paint();
+  });
+  paint();
+
+  /* ── botón atrás ── */
+  document.getElementById('backBtn').addEventListener('click', function () {
+    if (window.history && history.length > 1) history.back();
+    else location.href = S.home;
+  });
+})();
+</script>
+</body>
+</html>
