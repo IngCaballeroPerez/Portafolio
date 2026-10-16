@@ -971,12 +971,15 @@
       pid = e.pointerId; startX = e.clientX; startOff = CAR.offset;
       CAR.dragging = true; CAR.dragMoved = false; CAR.userPaused = true;
       stopLoop(); setCarouselUI(); vp.classList.add('is-dragging');
-      try { vp.setPointerCapture(pid); } catch (err) {}
     });
     vp.addEventListener('pointermove', function (e) {
       if (!CAR.dragging || (pid !== null && e.pointerId !== pid)) return;
       var dx = e.clientX - startX;
-      if (Math.abs(dx) > 4) CAR.dragMoved = true;
+      if (Math.abs(dx) > 4 && !CAR.dragMoved) {
+        CAR.dragMoved = true;
+        // Capture only a real drag; capturing pointerdown redirects card clicks.
+        try { vp.setPointerCapture(pid); } catch (err) {}
+      }
       CAR.offset = clampOffset(startOff - dx);
       CAR.track.style.transition = 'none';
       CAR.track.style.transform = 'translate3d(' + (-CAR.offset) + 'px,0,0)';

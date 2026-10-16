@@ -36,12 +36,18 @@ const context = vm.createContext({
 vm.runInContext(source.slice(source.indexOf('  var CAR ='), source.indexOf('  /* ─────────── FORMULARIO')), context);
 vm.runInContext('CAR.looping = true; CAR.count = 5; CAR.loopW = 1490; bindCarousel(); startLoop();', context);
 assert(context.CAR.raf, 'Initial automatic movement');
+let captures = 0;
+viewport.setPointerCapture = () => { captures++; };
+viewport.emit('pointerdown', { button: 0, pointerId: 1, clientX: 200 });
+assert.equal(captures, 0, 'A click must not be captured by the viewport');
+viewport.emit('pointerup');
 function drag() {
   viewport.emit('pointerdown', { button: 0, pointerId: 1, clientX: 200 });
   viewport.emit('pointermove', { pointerId: 1, clientX: 100 });
   viewport.emit('pointerup');
 }
 drag();
+assert.equal(captures, 1, "Real drags capture the pointer");
 assert.equal(context.CAR.raf, 0);
 advance(2999); assert.equal(context.CAR.raf, 0, 'Pause lasts three seconds');
 advance(1); assert(context.CAR.raf, 'Restarts without pointerleave');
