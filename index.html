@@ -77,7 +77,7 @@
       <ul class="nav__list" id="navList">
         <li><a class="nav__link" href="#about"      data-section="about"      data-i18n="nav.about">Sobre mí</a></li>
         <li><a class="nav__link" href="#skills"      data-section="skills"     data-i18n="nav.skills">Habilidades</a></li>
-        <li><a class="nav__link" href="#ai" data-section="ai">IA</a></li>
+        <li><a class="nav__link" href="#interactivity" data-section="interactivity">Interactividad</a></li>
         <li><a class="nav__link" href="#projects"    data-section="projects"   data-i18n="nav.projects">Proyectos</a></li>
         <li><a class="nav__link" href="#contact"     data-section="contact"    data-i18n="nav.contact">Contacto</a></li>
       </ul>
@@ -140,9 +140,9 @@
   <section class="hero section" id="hero" aria-labelledby="heroTitle">
     <div class="hero__ambient" aria-hidden="true"></div>
     <div class="hero__grid" aria-hidden="true"></div>
-    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
 
     <div class="container hero__inner">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
 
       <h1 class="hero__title reveal" data-d="1" id="heroTitle">
         <span class="hero__name grad-text" data-i18n="hero.name">Jose Luis</span>
@@ -189,33 +189,7 @@
   <!-- HABILIDADES: edita aquí los diez pilares y sus herramientas. -->
   <section class="section" id="skills" aria-labelledby="skillsTitle">
     <!-- Textura decorativa: no contiene datos reales ni se lee con lector de pantalla. -->
-    <pre class="pillars-code" aria-hidden="true"><code>from architecture import Application
-from quality import validate
-
-class Software:
-    def __init__(self, purpose):
-        self.purpose = purpose
-        self.components = []
-
-    def build(self):
-        plan = define_requirements()
-        design = create_interface(plan)
-        return implement(design)
-
-    def review(self, application):
-        validate(application)
-        return improve(application)
-
-async def workflow(context):
-    architecture = await plan(context)
-    product = await build(architecture)
-    return await verify(product)
-
-const experience = {
-    clarity: true,
-    accessibility: true,
-    maintainability: true
-};</code></pre>
+    <div class="pillars-code" aria-hidden="true"></div>
     <div class="container pillars-layout">
       <header class="pillars-heading reveal">
         <h2 class="sec-head__title" id="skillsTitle">Mis pilares</h2>
@@ -227,98 +201,184 @@ const experience = {
           <h3>Arquitectura y planificación</h3>
           <p>Organizo aplicaciones en componentes y defino su estructura, flujo de datos y requisitos para facilitar su evolución.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">Markdown, Mermaid, GitHub Issues</p>
+        
+          <button class="pillar__select" type="button" data-pillar="01" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: Arquitectura y planificación" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
         <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">02</span>
           <h3>Diseño UI/UX</h3>
           <p>Diseño interfaces claras y accesibles, con navegación intuitiva y adaptación a diferentes pantallas y formas de interacción.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">Figma, SVG, herramientas de accesibilidad del navegador</p>
+        
+          <button class="pillar__select" type="button" data-pillar="02" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: Diseño UI/UX" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
         <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">03</span>
           <h3>Frontend e interfaces</h3>
           <p>Desarrollo interfaces interactivas para aplicaciones web y de escritorio, cuidando su presentación y facilidad de uso.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">HTML5, CSS3, JavaScript, Tailwind CSS; Tkinter y ttk para escritorio</p>
+        
+          <button class="pillar__select" type="button" data-pillar="03" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: Frontend e interfaces" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
         <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">04</span>
           <h3>Backend y lógica de aplicación</h3>
           <p>Implemento reglas de negocio, validaciones y procesamiento de información en aplicaciones locales y servicios de servidor.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">Python, C#, Java, Perl; Node.js para JavaScript en servidor</p>
+        
+          <button class="pillar__select" type="button" data-pillar="04" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: Backend y lógica de aplicación" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
         <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">05</span>
           <h3>Bases de datos y almacenamiento</h3>
           <p>Organizo, consulto y almaceno información, con mecanismos de persistencia, importación y exportación.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">SQLite, Oracle Database, IndexedDB, SQL, DBeaver; JSON para intercambio de datos</p>
+        
+          <button class="pillar__select" type="button" data-pillar="05" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: Bases de datos y almacenamiento" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
         <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">06</span>
           <h3>APIs e integraciones</h3>
           <p>Desarrollo y conecto APIs para intercambiar información entre aplicaciones y servicios, con contratos y documentación claros.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">FastAPI, REST, GraphQL, OpenAPI, Postman</p>
+        
+          <button class="pillar__select" type="button" data-pillar="06" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: APIs e integraciones" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
         <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">07</span>
           <h3>Seguridad de aplicaciones</h3>
           <p>Aplico controles de acceso y validación de entradas para proteger la información y reducir vulnerabilidades comunes.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">OWASP ZAP, herramientas de desarrollo del navegador, bibliotecas de autenticación y validación</p>
+        
+          <button class="pillar__select" type="button" data-pillar="07" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: Seguridad de aplicaciones" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
         <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">08</span>
           <h3>Pruebas y calidad</h3>
           <p>Verifico funciones y recorridos de usuario, reproduzco errores y reviso compatibilidad y rendimiento.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">pytest, unittest, Playwright, Chrome DevTools</p>
+        
+          <button class="pillar__select" type="button" data-pillar="08" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: Pruebas y calidad" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
         <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">09</span>
           <h3>Empaquetado y publicación</h3>
           <p>Preparo ejecutables y paquetes de distribución, y automatizo procesos de compilación y publicación según la plataforma.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">PyInstaller, .NET CLI, GitHub Actions, Docker</p>
+        
+          <button class="pillar__select" type="button" data-pillar="09" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: Empaquetado y publicación" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
         <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">10</span>
           <h3>Mantenimiento y automatización</h3>
           <p>Corrijo errores, mantengo versiones y automatizo tareas repetitivas, incluido el procesamiento de archivos y datos.</p>
           <p class="pillar__tools" aria-label="Tecnologías utilizadas">Git, GitHub, VS Code, Python, Batch, CMD, pandas</p>
+        
+          <button class="pillar__select" type="button" data-pillar="10" aria-expanded="false" aria-controls="pillarPreview" aria-label="Ver ilustración: Mantenimiento y automatización" hidden>
+            <span class="pillar__arrow" aria-hidden="true">↗</span>
+          </button>
         </li>
       </ol>
+      <aside class="pillars-preview" id="pillarPreview" aria-labelledby="pillarPreviewTitle" hidden>
+        <div class="pillars-preview__inner">
+          <button class="pillars-back" id="pillarsBack" type="button">← Volver a mis pilares</button>
+          <figure>
+            <img id="pillarImage" src="assets/pillars/01.svg" width="500" height="390" alt="" loading="lazy">
+            <figcaption>
+              <h3 id="pillarPreviewTitle" aria-live="polite">Arquitectura y planificación</h3>
+              <p id="pillarPreviewDescription"></p>
+              <p class="pillars-preview__note">Ilustración conceptual · no es una captura de un proyecto.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </aside>
     </div>
   </section>
 
-  <!-- IA: añade únicamente herramientas usadas y repositorios propios comprobables. -->
-  <section class="section ai-section" id="ai" aria-labelledby="aiTitle" lang="es">
+  <!-- LABORATORIO: ejemplos de interacción; no modifica la configuración de la página. -->
+    <section class="section lab-section" id="interactivity" aria-labelledby="labTitle" lang="es">
     <div class="container">
       <header class="sec-head reveal">
-        <h2 class="sec-head__title" id="aiTitle">IA aplicada al desarrollo</h2>
-        <p class="sec-head__sub">De una idea a una implementación revisada: asistentes, criterios de ingeniería y herramientas propias.</p>
+        <h2 class="sec-head__title" id="labTitle">Código en movimiento</h2>
+        <p class="sec-head__sub">Pequeñas interacciones que puedes probar. A la izquierda, un fragmento; a la derecha, el resultado.</p>
       </header>
-      <div class="ai-grid">
-        <article class="ai-card reveal">
-          <span class="ai-card__number" aria-hidden="true">01</span>
-          <h3>Cómo la aplico</h3>
-          <p>Utilizo asistentes para estructurar requisitos, explorar soluciones, desarrollar código y preparar documentación. Reviso los cambios y distingo las pruebas ejecutadas de las comprobaciones pendientes.</p>
-          <ul class="ai-tags" aria-label="Aplicaciones"><li>Planificación</li><li>Desarrollo asistido</li><li>Revisión de código</li><li>Documentación</li></ul>
-        </article>
-        <article class="ai-card reveal" data-d="1">
-          <span class="ai-card__number" aria-hidden="true">02</span>
-          <h3>Herramientas de trabajo</h3>
-          <p>Trabajo con ChatGPT y Codex para convertir instrucciones y contexto del proyecto en cambios concretos y revisables.</p>
-          <ul class="ai-tags" aria-label="Herramientas utilizadas"><li>ChatGPT</li><li>Codex</li></ul>
-          <!-- Confirma otras herramientas antes de ampliar esta lista. -->
-        </article>
-        <article class="ai-card ai-card--featured reveal" data-d="2">
-          <span class="ai-card__number" aria-hidden="true">03</span>
-          <h3>Mi desarrollo: Knight</h3>
-          <p>Desarrollo un plugin que organiza instrucciones y habilidades de ingeniería para trabajar con asistentes de IA: planificación, revisión de código, seguridad, UX y verificación.</p>
-          <p>Su objetivo es mejorar el proceso y la trazabilidad del trabajo asistido. No es un modelo entrenado por mí ni una IA autónoma.</p>
-          <a class="ai-link" href="https://github.com/IngCaballeroPerez/Knight-Plugin" target="_blank" rel="noopener noreferrer">Explorar Knight en GitHub <span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-      <div class="ai-reference reveal">
-        <h3>Referencias de código abierto</h3>
-        <p><a class="ai-link" href="https://github.com/QwenLM/qwen-code" target="_blank" rel="noopener noreferrer">Qwen Code <span aria-hidden="true">↗</span></a> · Repositorio externo que sigo como referencia para herramientas de desarrollo con IA.</p>
-      </div>
+      <article class="lab-example reveal" aria-labelledby="switchTitle">
+        <div class="lab-source"><h3 id="switchTitle">01 · Switch pixel</h3><p>Un checkbox cambia el gesto, el color y la posición de la moneda.</p><pre tabindex="0" aria-label="Fragmento de HTML y CSS del switch"><code>&lt;input type=&quot;checkbox&quot; class=&quot;pixel-checkbox&quot;&gt;
+&lt;span class=&quot;pixel-toggle-track&quot;&gt;…&lt;/span&gt;
+
+.pixel-checkbox:checked ~ .pixel-toggle-track
+.pixel-coin-thumb {
+  transform: translateX(2.83em) rotate(360deg);
+}</code></pre><p class="lab-credit">Adaptación del ejemplo de <a href="https://uiverse.io/" target="_blank" rel="noopener noreferrer">Uiverse.io</a> por santhosh_2608.</p></div>
+        <div class="lab-result"><p class="lab-caption">Pruébalo · clic o Espacio</p><!-- Adaptado del ejemplo de Uiverse.io por santhosh_2608, proporcionado por el usuario. -->
+<label class="pixel-toggle-label" for="pixel-toggle">
+  <span class="sr-only">Activar demostración pixel</span>
+  <input type="checkbox" id="pixel-toggle" class="pixel-checkbox" role="switch">
+  <span class="pixel-toggle-track" aria-hidden="true">
+    <span class="indicator-wrapper indicator-on-wrap">✓</span>
+    <span class="indicator-wrapper indicator-off-wrap">×</span>
+    <span class="pixel-coin-thumb">
+      <span class="face-svg face-sad"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M3,2h3v1H3zm7,1h3v-1h-3zM4,4h2v3H4zm6,0h2v3h-2zM3,11h2v2H3zm8,0h2v2h-2zm-6,-2h6v2H5z"/></svg></span>
+      <span class="face-svg face-happy"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M3,2h3v1H3zm7,0h3v1h-3zM4,4h2v3H4zm6,0h2v3h-2zM3,9h2v2H3zm8,0h2v2h-2zm-6,2h6v2H5z"/></svg></span>
+    </span>
+  </span>
+  <span class="pixel-state"><span class="pixel-state--off">Desactivado</span><span class="pixel-state--on">Activado</span></span>
+</label></div>
+      </article>
+      <article class="lab-example reveal" aria-labelledby="tooltipTitle">
+        <div class="lab-source"><h3 id="tooltipTitle">02 · Tooltips y relleno</h3><p>El icono se llena de color y revela su etiqueta al pasar el cursor o recibir foco.</p><pre tabindex="0" aria-label="Fragmento de HTML y CSS de tooltips"><code>&lt;a aria-describedby=&quot;demo-github&quot;&gt;…&lt;/a&gt;
+&lt;span id=&quot;demo-github&quot; role=&quot;tooltip&quot;&gt;
+  GitHub
+&lt;/span&gt;
+
+.icon-content:hover .tooltip,
+.icon-content:focus-within .tooltip {
+  opacity: 1;
+  visibility: visible;
+}</code></pre><p class="lab-credit">Adaptación del ejemplo aportado. Enlaces de demostración a sitios oficiales; no son mis perfiles.</p></div>
+        <div class="lab-result"><p class="lab-caption">Pasa el cursor o usa Tab · Esc oculta la etiqueta</p><ul class="example-2" aria-label="Demostración de enlaces con tooltip"><li class="icon-content">
+  <a href="https://linkedin.com/" aria-label="LinkedIn: sitio oficial, ejemplo" aria-describedby="demo-linkedin" data-social="linkedin" target="_blank" rel="noopener noreferrer">
+    <span class="filled" aria-hidden="true"></span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 6h3v8H2zM2 2h3v3H2zM7 6h3v1c1-2 4-2 4 2v5h-3V9c0-2-1-2-1 0v5H7z"/></svg>
+  </a>
+  <span class="tooltip" id="demo-linkedin" role="tooltip">LinkedIn</span>
+</li>
+<li class="icon-content">
+  <a href="https://github.com/" aria-label="GitHub: sitio oficial, ejemplo" aria-describedby="demo-github" data-social="github" target="_blank" rel="noopener noreferrer">
+    <span class="filled" aria-hidden="true"></span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8a8 8 0 0 0-8-8"/></svg>
+  </a>
+  <span class="tooltip" id="demo-github" role="tooltip">GitHub</span>
+</li>
+<li class="icon-content">
+  <a href="https://instagram.com/" aria-label="Instagram: sitio oficial, ejemplo" aria-describedby="demo-instagram" data-social="instagram" target="_blank" rel="noopener noreferrer">
+    <span class="filled" aria-hidden="true"></span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="4" r="1"/></svg>
+  </a>
+  <span class="tooltip" id="demo-instagram" role="tooltip">Instagram</span>
+</li>
+<li class="icon-content">
+  <a href="https://youtube.com/" aria-label="YouTube: sitio oficial, ejemplo" aria-describedby="demo-youtube" data-social="youtube" target="_blank" rel="noopener noreferrer">
+    <span class="filled" aria-hidden="true"></span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M15 4c-.2-1-1-2-2-2H3C2 2 1 3 1 4v8c0 1 1 2 2 2h10c1 0 2-1 2-2z"/><path d="M6 5v6l5-3z" fill="#fff"/></svg>
+  </a>
+  <span class="tooltip" id="demo-youtube" role="tooltip">YouTube</span>
+</li></ul></div>
+      </article>
     </div>
   </section>
 
@@ -397,19 +457,27 @@ const experience = {
   <div class="container footer__inner">
 
     <!-- FOOTER: añade tus enlaces reales de contacto y repositorios aquí. -->
-    <div class="footer__top footer__top--simple">
-      <div class="footer__col">
-        <h2 class="footer__colTitle">Contactos</h2>
+    <div class="footer__top footer__top--complete">
+      <div class="footer__intro">
+        <p class="footer__name">Jose Luis</p>
+        <p class="footer__tagline">Desarrollo software desde la arquitectura hasta la experiencia de usuario.</p>
+        <a class="footer__contact-link" href="#contact">Conversemos sobre tu proyecto ↗</a>
+      </div>
+      <nav class="footer__col" aria-label="Explorar el portafolio">
+        <h2 class="footer__colTitle">Explorar</h2>
         <ul class="footer__links">
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="#about">Sobre mí</a></li><li><a href="#skills">Mis pilares</a></li>
+          <li><a href="#projects">Proyectos</a></li><li><a href="#interactivity">Interactividad</a></li>
           <li><a href="experiencia.html">Experiencia</a></li>
         </ul>
+      </nav>
+      <div class="footer__col">
+        <h2 class="footer__colTitle">Conectar</h2>
+        <ul class="footer__links"><li><a href="#contact">Contacto</a></li><li><a href="https://github.com/IngCaballeroPerez" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li></ul>
       </div>
       <div class="footer__col">
         <h2 class="footer__colTitle">Repositorios favoritos</h2>
-        <ul class="footer__links">
-          <li><a href="https://github.com/QwenLM/qwen-code" target="_blank" rel="noopener noreferrer">Qwen Code ↗</a></li>
-        </ul>
+        <ul class="footer__links"><li><a href="https://github.com/QwenLM/qwen-code" target="_blank" rel="noopener noreferrer">Qwen Code ↗</a></li></ul>
       </div>
     </div>
 
@@ -477,4 +545,5 @@ const experience = {
 <script src="js/app.js" defer></script>
 </body>
 </html>
+
 

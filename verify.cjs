@@ -88,10 +88,13 @@ assert(hero.includes('>Jose Luis</span>'));
 assert(!hero.includes('[Marcador'));
 assert(!hero.includes('hero__greeting'));
 assert(!home.includes('<strong>Tecnologías y herramientas</strong>'));
-assert(home.includes('id="ai"'));
-assert(home.includes('aria-hidden="true"><code>'));
+assert(!home.includes('id="ai"'));
+assert(home.includes('id="interactivity"'));
+assert(home.includes('id="pixel-toggle"'));
+assert.equal((home.match(/data-pillar=/g) || []).length, 10);
+assert(home.includes('class="pillars-code" aria-hidden="true"')); 
 assert(!home.includes('class="sec-head__label"'));
-console.log('OK: simplified hero, decorative code, AI section and clean section headings.');
+console.log('OK: simplified hero, decorative code, interaction lab and clean section headings.');
 
 // The reveal observer repeats the same transition on re-entry.
 let revealCallback;
@@ -120,3 +123,54 @@ context.reduceMotion = true;
 context.observeReveals();
 assert(revealed.has('is-in'));
 console.log('OK: reveal on entry and re-entry, with reduced-motion fallback.');
+
+
+// Explorer state: switch selection, close, Escape, and restore focus.
+function uiNode() {
+  const e = node();
+  const classes = new Set();
+  e.classList = {
+    add(x) { classes.add(x); }, remove(x) { classes.delete(x); },
+    toggle(x, value) { if (value) classes.add(x); else classes.delete(x); },
+    contains(x) { return classes.has(x); }
+  };
+  e.attrs = {};
+  e.setAttribute = (k, v) => { e.attrs[k] = v; };
+  e.removeAttribute = k => { delete e.attrs[k]; };
+  e.focus = () => { e.focused = true; };
+  e.scrollIntoView = () => {};
+  return e;
+}
+const layout = uiNode(), heading = uiNode(), preview = uiNode(), pic = uiNode(), title = uiNode(), desc = uiNode(), back = uiNode();
+const buttons = Array.from({length:10}, (_, i) => {
+  const button = uiNode(), card = uiNode();
+  button.dataset = {pillar: String(i + 1).padStart(2, '0')};
+  card.querySelector = selector => ({textContent: selector === 'h3' ? 'Pilar ' + (i + 1) : 'Descripción ' + (i + 1)});
+  button.closest = () => card;
+  return button;
+});
+layout.querySelector = () => heading;
+layout.querySelectorAll = () => buttons;
+const ids = {pillarPreview:preview, pillarImage:pic, pillarPreviewTitle:title, pillarPreviewDescription:desc, pillarsBack:back};
+vm.runInNewContext(source.slice(source.indexOf('(function bindPillarExplorer()'), source.indexOf('/* Escape dismisses')), {
+  document: {querySelector:()=>layout, getElementById:id=>ids[id]},
+  window: {matchMedia:()=>({matches:false})}
+});
+buttons[0].emit('click');
+assert(layout.classList.contains('is-exploring'));
+assert.equal(pic.src, 'assets/pillars/01.svg');
+assert.equal(heading.inert, true);
+assert.equal(preview.inert, false);
+buttons[9].emit('click');
+assert.equal(pic.src, 'assets/pillars/10.svg');
+assert.equal(buttons[0].attrs['aria-expanded'], 'false');
+back.emit('click');
+assert(!layout.classList.contains('is-exploring'));
+assert(buttons[9].focused);
+assert.equal(heading.inert, false);
+assert.equal(preview.inert, true);
+buttons[2].emit('click');
+layout.emit('keydown', {key:'Escape',preventDefault(){}});
+assert(!layout.classList.contains('is-exploring'));
+assert(buttons[2].focused);
+console.log('OK: ten illustrated pillars, selection changes, back/Escape and focus restoration.');

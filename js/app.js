@@ -541,15 +541,20 @@
   (function heroCanvas() {
     var cv = $('#heroCanvas');
     if (!cv || !cv.getContext) return;
-    if (reduceMotion) { cv.remove(); return; }
-    var ctx = cv.getContext('2d'), pts = [], w = 0, h = 0, raf = 0, live = true;
+    var ctx = cv.getContext('2d');
+    if (!ctx) return;
+    var pts = [], w = 0, h = 0, raf = 0, live = true;
 
-    function col(a) { return 'hsl(' + heroAccent.h + ' 85% 62% / ' + a + ')'; }
+    function col(a) {
+      var lightness = document.documentElement.getAttribute('data-theme') === 'light' ? 40 : 70;
+      return 'hsl(' + heroAccent.h + ' 75% ' + lightness + '% / ' + a + ')';
+    }
     function size() {
       var dpr = Math.min(window.devicePixelRatio || 1, 2);
       w = cv.clientWidth; h = cv.clientHeight;
       if (!w || !h) return;
       cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+      if (!ctx) return;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       var n = Math.round(Math.min(42, Math.max(12, (w * h) / 30000)));
       pts = [];
@@ -557,7 +562,7 @@
     }
     function frame() {
       raf = 0;
-      if (!live) return;
+      if (!live || document.hidden) return;
       ctx.clearRect(0, 0, w, h);
       for (var i = 0; i < pts.length; i++) {
         var p = pts[i];
@@ -565,26 +570,27 @@
         if (p.x < -20) p.x = w + 20; if (p.x > w + 20) p.x = -20;
         if (p.y < -20) p.y = h + 20; if (p.y > h + 20) p.y = -20;
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832);
-        ctx.fillStyle = col(.55); ctx.fill();
+        ctx.fillStyle = col(.85); ctx.fill();
         for (var j = i + 1; j < pts.length; j++) {
           var q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d2 = dx * dx + dy * dy;
           if (d2 < 15000) {
             ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = col((0.14 * (1 - d2 / 15000)).toFixed(3));
+            ctx.strokeStyle = col((0.40 * (1 - d2 / 15000)).toFixed(3));
             ctx.lineWidth = 1; ctx.stroke();
           }
         }
       }
-      raf = window.requestAnimationFrame(frame);
+      if (!reduceMotion) raf = window.requestAnimationFrame(frame);
     }
-    function start() { if (!raf && live) raf = window.requestAnimationFrame(frame); }
+    function start() { if (!raf && live && !document.hidden) raf = window.requestAnimationFrame(frame); }
     function stop() { if (raf) { window.cancelAnimationFrame(raf); raf = 0; } }
 
     size(); start();
     var rt;
     window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { size(); start(); }, 200); });
     document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else start(); });
-    document.addEventListener('appearance:change', function (e) { heroAccent.h = e.detail.hue; });
+    document.addEventListener('appearance:change', function (e) { heroAccent.h = e.detail.hue; start(); });
+    if (mqReduce.addEventListener) mqReduce.addEventListener('change', function () { stop(); start(); });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (e) { live = e[0].isIntersecting; if (live) start(); else stop(); }, { threshold: 0 }).observe(cv);
     }
@@ -1349,3 +1355,82 @@
   measureLayers();
 })();
 
+
+
+/* PILARES: mejora progresiva sobre contenido HTML editable. */
+(function bindPillarExplorer() {
+  'use strict';
+  var layout = document.querySelector('.pillars-layout');
+  if (!layout) return;
+  var heading = layout.querySelector('.pillars-heading');
+  var preview = document.getElementById('pillarPreview');
+  var image = document.getElementById('pillarImage');
+  var title = document.getElementById('pillarPreviewTitle');
+  var description = document.getElementById('pillarPreviewDescription');
+  var back = document.getElementById('pillarsBack');
+  var buttons = Array.from(layout.querySelectorAll('[data-pillar]'));
+  var active = null;
+
+  function close() {
+    var trigger = active;
+    layout.classList.remove('is-exploring');
+    heading.inert = false;
+    heading.removeAttribute('aria-hidden');
+    preview.inert = true;
+    preview.setAttribute('aria-hidden', 'true');
+    buttons.forEach(function (button) {
+      button.setAttribute('aria-expanded', 'false');
+      button.closest('.pillar').classList.remove('is-selected');
+    });
+    active = null;
+    if (trigger) trigger.focus({ preventScroll: true });
+  }
+
+  preview.hidden = false;
+  preview.inert = true;
+  preview.setAttribute('aria-hidden', 'true');
+  buttons.forEach(function (button) {
+    button.hidden = false;
+    button.addEventListener('click', function () {
+      if (active === button) { close(); return; }
+      buttons.forEach(function (other) {
+        other.setAttribute('aria-expanded', String(other === button));
+        other.closest('.pillar').classList.toggle('is-selected', other === button);
+      });
+      active = button;
+      var card = button.closest('.pillar');
+      title.textContent = card.querySelector('h3').textContent;
+      description.textContent = card.querySelector('p').textContent;
+      image.src = 'assets/pillars/' + button.dataset.pillar + '.svg';
+      image.alt = 'Ilustración conceptual de ' + title.textContent.toLowerCase();
+      heading.inert = true;
+      heading.setAttribute('aria-hidden', 'true');
+      preview.inert = false;
+      preview.removeAttribute('aria-hidden');
+      layout.classList.add('is-exploring');
+      // On narrow screens, collapse to the selected pillar without leaving it above the viewport.
+      if (window.matchMedia('(max-width: 54rem)').matches) {
+        card.scrollIntoView({ block: 'start', behavior: 'auto' });
+      }
+    });
+  });
+  back.addEventListener('click', close);
+  layout.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && active) { event.preventDefault(); close(); }
+  });
+})();
+
+/* Escape dismisses demonstration tooltips without moving keyboard focus. */
+(function bindDemoTooltips() {
+  'use strict';
+  var items = document.querySelectorAll('.example-2 .icon-content');
+  items.forEach(function (item) {
+    item.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') item.classList.add('is-dismissed');
+    });
+    item.addEventListener('focusout', function () { item.classList.remove('is-dismissed'); });
+    item.addEventListener('mouseleave', function () {
+      if (!item.contains(document.activeElement)) item.classList.remove('is-dismissed');
+    });
+  });
+})();
