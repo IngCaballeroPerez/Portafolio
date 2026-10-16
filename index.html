@@ -61,7 +61,7 @@
   .footer-reveal .footer__inner{opacity:1!important;transform:none!important}
 </style></noscript>
 
-<link rel="stylesheet" href="css/styles.css?v=20261016-lab">
+<link rel="stylesheet" href="css/styles.css?v=20261016-polish">
 </head>
 
 <body>
@@ -141,8 +141,8 @@
     <div class="hero__ambient" aria-hidden="true"></div>
     <div class="hero__grid" aria-hidden="true"></div>
 
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
     <div class="container hero__inner">
-      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
 
       <h1 class="hero__title reveal" data-d="1" id="heroTitle">
         <span class="hero__name grad-text" data-i18n="hero.name">Jose Luis</span>
@@ -190,8 +190,9 @@
   <section class="section" id="skills" aria-labelledby="skillsTitle">
     <!-- Textura decorativa: no contiene datos reales ni se lee con lector de pantalla. -->
     <div class="pillars-code" aria-hidden="true"></div>
-    <div class="container pillars-layout">
-      <header class="pillars-heading reveal">
+    <div class="container pillars-window">
+    <div class="pillars-layout">
+      <header class="pillars-heading">
         <h2 class="sec-head__title" id="skillsTitle">Mis pilares</h2>
         <p>De la planificación al mantenimiento: mi forma de desarrollar aplicaciones.</p>
       </header>
@@ -311,6 +312,7 @@
         </div>
       </aside>
     </div>
+    </div>
   </section>
 
   <!-- LABORATORIO: ejemplos de interacción; no modifica la configuración de la página. -->
@@ -328,7 +330,7 @@
 .pixel-coin-thumb {
   transform: translateX(2.83em) rotate(360deg);
 }</code></pre><p class="lab-credit">Adaptación del ejemplo de <a href="https://uiverse.io/" target="_blank" rel="noopener noreferrer">Uiverse.io</a> por santhosh_2608.</p></div>
-        <div class="lab-result"><p class="lab-caption">Pruébalo · clic o Espacio</p><!-- Adaptado del ejemplo de Uiverse.io por santhosh_2608, proporcionado por el usuario. -->
+        <div class="lab-result"><p class="lab-caption">Pruébalo · clic o toque</p><!-- Adaptado del ejemplo de Uiverse.io por santhosh_2608, proporcionado por el usuario. -->
 <label class="pixel-toggle-label" for="pixel-toggle">
   <span class="sr-only">Activar demostración pixel</span>
   <input type="checkbox" id="pixel-toggle" class="pixel-checkbox" role="switch">
@@ -344,38 +346,37 @@
 </label></div>
       </article>
       <article class="lab-example reveal" aria-labelledby="tooltipTitle">
-        <div class="lab-source"><h3 id="tooltipTitle">02 · Tooltips y relleno</h3><p>El icono se llena de color y revela su etiqueta al pasar el cursor o recibir foco.</p><pre tabindex="0" aria-label="Fragmento de HTML y CSS de tooltips"><code>&lt;a aria-describedby=&quot;demo-github&quot;&gt;…&lt;/a&gt;
+        <div class="lab-source"><h3 id="tooltipTitle">02 · Tooltips y relleno</h3><p>El icono se llena de color y revela su etiqueta al hacer clic o tocarlo.</p><pre tabindex="0" aria-label="Fragmento de HTML y CSS de tooltips"><code>&lt;a aria-describedby=&quot;demo-github&quot;&gt;…&lt;/a&gt;
 &lt;span id=&quot;demo-github&quot; role=&quot;tooltip&quot;&gt;
   GitHub
 &lt;/span&gt;
 
-.icon-content:hover .tooltip,
-.icon-content:focus-within .tooltip {
+.icon-content.is-active .tooltip {
   opacity: 1;
   visibility: visible;
-}</code></pre><p class="lab-credit">Adaptación del ejemplo aportado. Enlaces de demostración a sitios oficiales; no son mis perfiles.</p></div>
-        <div class="lab-result"><p class="lab-caption">Pasa el cursor o usa Tab · Esc oculta la etiqueta</p><ul class="example-2" aria-label="Demostración de enlaces con tooltip"><li class="icon-content">
-  <a href="https://linkedin.com/" aria-label="LinkedIn: sitio oficial, ejemplo" aria-describedby="demo-linkedin" data-social="linkedin" target="_blank" rel="noopener noreferrer">
+}</code></pre><p class="lab-credit">Adaptación del ejemplo aportado. Controles de demostración; no son enlaces a mis perfiles.</p></div>
+        <div class="lab-result"><p class="lab-caption">Haz clic para mostrar la etiqueta · Esc la oculta</p><ul class="example-2" aria-label="Demostración de etiquetas con clic"><li class="icon-content">
+  <button type="button" aria-label="Mostrar LinkedIn" aria-describedby="demo-linkedin" data-social="linkedin" aria-expanded="false">
     <span class="filled" aria-hidden="true"></span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 6h3v8H2zM2 2h3v3H2zM7 6h3v1c1-2 4-2 4 2v5h-3V9c0-2-1-2-1 0v5H7z"/></svg>
-  </a>
+  </button>
   <span class="tooltip" id="demo-linkedin" role="tooltip">LinkedIn</span>
 </li>
 <li class="icon-content">
-  <a href="https://github.com/" aria-label="GitHub: sitio oficial, ejemplo" aria-describedby="demo-github" data-social="github" target="_blank" rel="noopener noreferrer">
+  <button type="button" aria-label="Mostrar GitHub" aria-describedby="demo-github" data-social="github" aria-expanded="false">
     <span class="filled" aria-hidden="true"></span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8a8 8 0 0 0-8-8"/></svg>
-  </a>
+  </button>
   <span class="tooltip" id="demo-github" role="tooltip">GitHub</span>
 </li>
 <li class="icon-content">
-  <a href="https://instagram.com/" aria-label="Instagram: sitio oficial, ejemplo" aria-describedby="demo-instagram" data-social="instagram" target="_blank" rel="noopener noreferrer">
+  <button type="button" aria-label="Mostrar Instagram" aria-describedby="demo-instagram" data-social="instagram" aria-expanded="false">
     <span class="filled" aria-hidden="true"></span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="4" r="1"/></svg>
-  </a>
+  </button>
   <span class="tooltip" id="demo-instagram" role="tooltip">Instagram</span>
 </li>
 <li class="icon-content">
-  <a href="https://youtube.com/" aria-label="YouTube: sitio oficial, ejemplo" aria-describedby="demo-youtube" data-social="youtube" target="_blank" rel="noopener noreferrer">
+  <button type="button" aria-label="Mostrar YouTube" aria-describedby="demo-youtube" data-social="youtube" aria-expanded="false">
     <span class="filled" aria-hidden="true"></span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M15 4c-.2-1-1-2-2-2H3C2 2 1 3 1 4v8c0 1 1 2 2 2h10c1 0 2-1 2-2z"/><path d="M6 5v6l5-3z" fill="#fff"/></svg>
-  </a>
+  </button>
   <span class="tooltip" id="demo-youtube" role="tooltip">YouTube</span>
 </li></ul></div>
       </article>
@@ -386,13 +387,13 @@
     <div class="container">
       <header class="sec-head reveal">
         <h2 class="sec-head__title" id="projTitle" data-i18n="projects.title">Trabajo seleccionado</h2>
-        <p class="sec-head__sub" data-i18n="projects.subtitle">Selecciona una tarjeta con Tab y pulsa Intro para abrir sus detalles.</p>
+        <p class="sec-head__sub" data-i18n="projects.subtitle">Haz clic en una tarjeta para abrir sus detalles.</p>
       </header>
 
       <div class="projects reveal" data-d="1" id="projectsGrid"></div>
 
       <div class="projects__meta">
-        <p class="projects__hint" data-i18n="projects.hint">Consejo: usa Tab e Intro.</p>
+        <p class="projects__hint" data-i18n="projects.hint">Haz clic o toca una tarjeta para ver sus detalles.</p>
 
       </div>
     </div>
@@ -458,11 +459,6 @@
 
     <!-- FOOTER: añade tus enlaces reales de contacto y repositorios aquí. -->
     <div class="footer__top footer__top--complete">
-      <div class="footer__intro">
-        <p class="footer__name">Jose Luis</p>
-        <p class="footer__tagline">Desarrollo software desde la arquitectura hasta la experiencia de usuario.</p>
-        <a class="footer__contact-link" href="#contact">Conversemos sobre tu proyecto ↗</a>
-      </div>
       <nav class="footer__col" aria-label="Explorar el portafolio">
         <h2 class="footer__colTitle">Explorar</h2>
         <ul class="footer__links">
@@ -475,9 +471,11 @@
         <h2 class="footer__colTitle">Conectar</h2>
         <ul class="footer__links"><li><a href="#contact">Contacto</a></li><li><a href="https://github.com/IngCaballeroPerez" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li></ul>
       </div>
-      <div class="footer__col">
-        <h2 class="footer__colTitle">Repositorios favoritos</h2>
-        <ul class="footer__links"><li><a href="https://github.com/QwenLM/qwen-code" target="_blank" rel="noopener noreferrer">Qwen Code ↗</a></li></ul>
+
+      <div class="footer__intro">
+        <p class="footer__name">Jose Luis</p>
+        <p class="footer__tagline">Desarrollo software desde la arquitectura hasta la experiencia de usuario.</p>
+        <a class="footer__contact-link" href="#contact">Conversemos sobre tu proyecto ↗</a>
       </div>
     </div>
 
@@ -542,7 +540,7 @@
   </div>
 </dialog>
 
-<script src="js/app.js?v=20261016-lab" defer></script>
+<script src="js/app.js?v=20261016-polish" defer></script>
 </body>
 </html>
 

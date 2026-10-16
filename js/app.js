@@ -56,8 +56,8 @@
         edu1: { period: '[Año inicio] — [Año fin]', title: '[Titulación o programa]', org: '[Institución]', points: ['[Marcador — asignaturas relevantes, tesis o menciones.]', '[Marcador — actividades, asociaciones o premios.]'] }
       } },
     projects: { label: 'Proyectos', title: 'Trabajo seleccionado',
-      subtitle: 'Selecciona una tarjeta con Tab y pulsa Intro para abrir sus detalles.',
-      hint: 'Usa Tab para seleccionar una tarjeta e Intro para abrir sus detalles. El espacio no abre tarjetas.',
+      subtitle: 'Haz clic en una tarjeta para abrir sus detalles.',
+      hint: 'Haz clic o toca una tarjeta para ver sus detalles.',
       empty: 'Aún no hay proyectos configurados.', promote: 'Promover {name} al espacio destacado',
       imageAlt: 'Captura de pantalla de {name}',
       filtered: '{n} de {total} proyectos usan {tech}', filteredNone: 'Ningún proyecto usa {tech} todavía',
@@ -68,7 +68,7 @@
         p3: { description: '[Marcador — descripción breve del proyecto.]', problem: '[Marcador — el problema que resuelve.]', features: ['[Marcador — funcionalidad]', '[Marcador — funcionalidad]', '[Marcador — funcionalidad]'], architecture: '[Marcador — resumen de la arquitectura.]', contribution: '[Marcador — tu rol.]', challenges: '[Marcador — reto y solución.]', results: '[Marcador — resultado.]' },
         p4: { description: '[Marcador — descripción breve del proyecto.]', problem: '[Marcador — el problema que resuelve.]', features: ['[Marcador — funcionalidad]', '[Marcador — funcionalidad]'], architecture: '[Marcador — resumen de la arquitectura.]', contribution: '[Marcador — tu rol.]', challenges: '[Marcador — reto y solución.]', results: '[Marcador — resultado.]' }
       },
-      modal: { eyebrow: 'Proyecto', overview: 'Resumen', problem: 'Planteamiento del problema', features: 'Funcionalidades clave', architecture: 'Arquitectura y decisiones', technologies: 'Tecnologías', contribution: 'Mi contribución', challenges: 'Retos y soluciones', results: 'Resultados y aprendizajes', repository: 'Repositorio', demo: 'Demo en vivo', docs: 'Documentación', noLinks: 'No hay enlaces públicos para este proyecto.', openCta: 'Pulsa Intro para ver los detalles', openAria: 'Abrir los detalles de {name}' } },
+      modal: { eyebrow: 'Proyecto', overview: 'Resumen', problem: 'Planteamiento del problema', features: 'Funcionalidades clave', architecture: 'Arquitectura y decisiones', technologies: 'Tecnologías', contribution: 'Mi contribución', challenges: 'Retos y soluciones', results: 'Resultados y aprendizajes', repository: 'Repositorio', demo: 'Demo en vivo', docs: 'Documentación', noLinks: 'No hay enlaces públicos para este proyecto.', openCta: 'Haz clic para ver los detalles', openAria: 'Abrir los detalles de {name}' } },
     certs: { title: 'Certificaciones', hint: 'Arrastra para explorar · el movimiento continúa después de 3 segundos',
       carouselLabel: 'Carrusel de certificaciones', viewportLabel: 'Certificaciones. Usa las flechas para navegar e Intro para previsualizar.',
       prev: 'Certificación anterior', next: 'Certificación siguiente', pause: 'Pausar el desplazamiento automático', play: 'Reanudar el desplazamiento automático',
@@ -135,8 +135,8 @@
         edu1: { period: '[Start Year] — [End Year]', title: '[Degree or Programme]', org: '[Institution]', points: ['[Placeholder — relevant coursework, thesis or honours.]', '[Placeholder — activities, societies or awards.]'] }
       } },
     projects: { label: 'Projects', title: 'Selected work',
-      subtitle: 'Select a card with Tab and press Enter to open its details.',
-      hint: 'Tab to a card and press Enter to open its details. Space does not open cards.',
+      subtitle: 'Click a card to open its details.',
+      hint: 'Click or tap a card to view its details.',
       empty: 'No projects configured yet.', promote: 'Promote {name} to the featured slot',
       imageAlt: 'Screenshot of {name}',
       filtered: '{n} of {total} projects use {tech}', filteredNone: 'No project uses {tech} yet',
@@ -147,7 +147,7 @@
         p3: { description: '[Placeholder — short description of the project.]', problem: '[Placeholder — the problem it solves.]', features: ['[Placeholder — feature]', '[Placeholder — feature]', '[Placeholder — feature]'], architecture: '[Placeholder — architecture summary.]', contribution: '[Placeholder — your role.]', challenges: '[Placeholder — challenge and solution.]', results: '[Placeholder — outcome.]' },
         p4: { description: '[Placeholder — short description of the project.]', problem: '[Placeholder — the problem it solves.]', features: ['[Placeholder — feature]', '[Placeholder — feature]'], architecture: '[Placeholder — architecture summary.]', contribution: '[Placeholder — your role.]', challenges: '[Placeholder — challenge and solution.]', results: '[Placeholder — outcome.]' }
       },
-      modal: { eyebrow: 'Project', overview: 'Overview', problem: 'Problem statement', features: 'Key features', architecture: 'Architecture & decisions', technologies: 'Technologies', contribution: 'My contribution', challenges: 'Challenges & solutions', results: 'Results & lessons', repository: 'Repository', demo: 'Live demo', docs: 'Documentation', noLinks: 'No public links available for this project.', openCta: 'Press Enter to view details', openAria: 'Open details for {name}' } },
+      modal: { eyebrow: 'Project', overview: 'Overview', problem: 'Problem statement', features: 'Key features', architecture: 'Architecture & decisions', technologies: 'Technologies', contribution: 'My contribution', challenges: 'Challenges & solutions', results: 'Results & lessons', repository: 'Repository', demo: 'Live demo', docs: 'Documentation', noLinks: 'No public links available for this project.', openCta: 'Click to view details', openAria: 'Open details for {name}' } },
     certs: { title: 'Certifications', hint: 'Drag to explore · movement resumes after 3 seconds',
       carouselLabel: 'Certifications carousel', viewportLabel: 'Certifications. Use the arrow keys to browse, Enter to preview.',
       prev: 'Previous certification', next: 'Next certification', pause: 'Pause automatic scrolling', play: 'Resume automatic scrolling',
@@ -214,8 +214,8 @@
         edu1: { period: '[起始年份] — [结束年份]', title: '[学位或专业]', org: '[学校名称]', points: ['[占位内容 —— 相关课程、毕业论文或荣誉。]', '[占位内容 —— 社团活动、组织或奖项。]'] }
       } },
     projects: { label: '项目', title: '精选作品',
-      subtitle: '使用 Tab 选择卡片，然后按回车键查看详情。',
-      hint: '提示：使用 Tab 键选中卡片，回车键查看详情，通过提升按钮将其与主展示位互换。',
+      subtitle: '点击卡片查看详情。',
+      hint: '点击卡片查看详情。',
       empty: '尚未配置项目。', promote: '将 {name} 提升至主展示位',
       imageAlt: '{name} 的界面截图',
       filtered: '{total} 个项目中有 {n} 个使用 {tech}', filteredNone: '暂无项目使用 {tech}',
@@ -226,7 +226,7 @@
         p3: { description: '[占位内容 —— 项目简述。]', problem: '[占位内容 —— 它解决的问题。]', features: ['[占位内容 —— 功能]', '[占位内容 —— 功能]', '[占位内容 —— 功能]'], architecture: '[占位内容 —— 架构概述。]', contribution: '[占位内容 —— 你的角色。]', challenges: '[占位内容 —— 挑战与解决方案。]', results: '[占位内容 —— 成果。]' },
         p4: { description: '[占位内容 —— 项目简述。]', problem: '[占位内容 —— 它解决的问题。]', features: ['[占位内容 —— 功能]', '[占位内容 —— 功能]'], architecture: '[占位内容 —— 架构概述。]', contribution: '[占位内容 —— 你的角色。]', challenges: '[占位内容 —— 挑战与解决方案。]', results: '[占位内容 —— 成果。]' }
       },
-      modal: { eyebrow: '项目', overview: '项目概述', problem: '问题陈述', features: '核心功能', architecture: '架构与技术决策', technologies: '使用技术', contribution: '我的贡献', challenges: '挑战与解决方案', results: '成果与收获', repository: '代码仓库', demo: '在线演示', docs: '项目文档', noLinks: '该项目暂无公开链接。', openCta: '按回车键查看详情', openAria: '打开 {name} 的详细信息' } },
+      modal: { eyebrow: '项目', overview: '项目概述', problem: '问题陈述', features: '核心功能', architecture: '架构与技术决策', technologies: '使用技术', contribution: '我的贡献', challenges: '挑战与解决方案', results: '成果与收获', repository: '代码仓库', demo: '在线演示', docs: '项目文档', noLinks: '该项目暂无公开链接。', openCta: '点击查看详情', openAria: '打开 {name} 的详细信息' } },
     certs: { title: '专业认证', hint: '拖动浏览 · 3 秒后继续滚动',
       carouselLabel: '认证轮播', viewportLabel: '认证列表。使用左右方向键浏览，回车键预览。',
       prev: '上一项认证', next: '下一项认证', pause: '暂停自动滚动', play: '继续自动滚动',
@@ -508,8 +508,10 @@
   var bar = $('#scrollBar'), ticking = false;
   function onScrollFrame() {
     ticking = false;
-    if (!bar) return;
     var y = window.scrollY || window.pageYOffset;
+    var nav = $('#nav');
+    if (nav) nav.classList.toggle('is-scrolled', y > 12 || !$('#hero'));
+    if (!bar) return;
     var max = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, Math.max(0, y / max)) : 0) + ')';
   }
@@ -611,7 +613,7 @@
     var base = 'projects.items.' + p.id + '.';
     var card = el('div', {
       class: 'pcard ' + (featured ? 'pcard--lg' : 'pcard--sm'),
-      'data-id': p.id, role: 'group', tabindex: '0', 'aria-keyshortcuts': 'Enter',
+      'data-id': p.id, role: 'group', tabindex: '0',
       'aria-label': t('projects.modal.openAria', { name: p.name }),
       style: '--hue:' + p.hue
     });
@@ -653,11 +655,7 @@
       promo.addEventListener('click', function (e) { e.stopPropagation(); promote(p.id); });
       card.appendChild(promo);
     }
-    card.addEventListener('click', function () { if (!featured) promote(p.id); });
-    card.addEventListener('keydown', function (e) {
-      if (e.target !== card) return;
-      if (e.key === 'Enter') { e.preventDefault(); openProject(p, card); }
-    });
+    card.addEventListener('click', function () { openProject(p, card); });
     return card;
   }
 
@@ -925,6 +923,8 @@
           media.appendChild(im);
         }
         media.appendChild(el('span', { class: 'cert__seal' }, [svg(P.seal, 22, true)]));
+        var expand = el('span', { class: 'cert__expand', 'aria-hidden': 'true', text: '⤢' });
+        media.appendChild(expand);
         card.appendChild(media);
         var b = el('div', { class: 'cert__body' });
         var nameEl = el('span', { class: 'cert__name' }, [document.createTextNode(nm)]);
@@ -1420,17 +1420,34 @@
   });
 })();
 
-/* Escape dismisses demonstration tooltips without moving keyboard focus. */
-(function bindDemoTooltips() {
+/* LAB: activación explícita con clic/toque; Escape cierra etiquetas. */
+(function bindClickDemos() {
   'use strict';
-  var items = document.querySelectorAll('.example-2 .icon-content');
+  var demo = document.getElementById('interactivity');
+  if (!demo) return;
+  demo.addEventListener('keydown', function (event) {
+    if (event.key === ' ' || event.key === 'Enter') {
+      if (event.target.matches('.pixel-checkbox, .example-2 button')) event.preventDefault();
+    }
+    if (event.key === 'Escape') closeTooltips();
+  });
+  var items = Array.from(demo.querySelectorAll('.example-2 .icon-content'));
+  function closeTooltips() {
+    items.forEach(function (item) {
+      item.classList.remove('is-active');
+      item.querySelector('button').setAttribute('aria-expanded', 'false');
+    });
+  }
   items.forEach(function (item) {
-    item.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') item.classList.add('is-dismissed');
+    var button = item.querySelector('button');
+    button.addEventListener('click', function () {
+      var open = !item.classList.contains('is-active');
+      closeTooltips();
+      item.classList.toggle('is-active', open);
+      button.setAttribute('aria-expanded', String(open));
     });
-    item.addEventListener('focusout', function () { item.classList.remove('is-dismissed'); });
-    item.addEventListener('mouseleave', function () {
-      if (!item.contains(document.activeElement)) item.classList.remove('is-dismissed');
-    });
+  });
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('.example-2')) closeTooltips();
   });
 })();

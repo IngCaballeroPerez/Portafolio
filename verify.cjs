@@ -60,12 +60,13 @@ const project = { id: 'test', name: 'Test', tech: [], hue: 210 };
 for (const featured of [true, false]) {
   const card = context.buildCard(project, 0, featured);
   const before = opened;
-  card.emit('click');
   card.emit('keydown', { key: 'Tab', target: card, preventDefault() {} });
   card.emit('keydown', { key: ' ', target: card, preventDefault() {} });
-  assert.equal(opened, before, 'Neither click, Tab nor Space opens details');
+  assert.equal(opened, before, 'Tab and Space do not open details');
   card.emit('keydown', { key: 'Enter', target: card, preventDefault() {} });
-  assert.equal(opened, before + 1, 'Enter opens any focused card');
+  assert.equal(opened, before, 'Enter does not open details');
+  card.emit('click');
+  assert.equal(opened, before + 1, 'Click opens details');
 }
 console.log('OK: project activation, 3-second resume, repeated drag, keyboard focus and reduced motion.');
 
@@ -152,7 +153,7 @@ const buttons = Array.from({length:10}, (_, i) => {
 layout.querySelector = () => heading;
 layout.querySelectorAll = () => buttons;
 const ids = {pillarPreview:preview, pillarImage:pic, pillarPreviewTitle:title, pillarPreviewDescription:desc, pillarsBack:back};
-vm.runInNewContext(source.slice(source.indexOf('(function bindPillarExplorer()'), source.indexOf('/* Escape dismisses')), {
+vm.runInNewContext(source.slice(source.indexOf('(function bindPillarExplorer()'), source.indexOf('/* LAB:')), {
   document: {querySelector:()=>layout, getElementById:id=>ids[id]},
   window: {matchMedia:()=>({matches:false})}
 });
