@@ -77,6 +77,7 @@
       <ul class="nav__list" id="navList">
         <li><a class="nav__link" href="#about"      data-section="about"      data-i18n="nav.about">Sobre mí</a></li>
         <li><a class="nav__link" href="#skills"      data-section="skills"     data-i18n="nav.skills">Habilidades</a></li>
+        <li><a class="nav__link" href="#ai" data-section="ai">IA</a></li>
         <li><a class="nav__link" href="#projects"    data-section="projects"   data-i18n="nav.projects">Proyectos</a></li>
         <li><a class="nav__link" href="#contact"     data-section="contact"    data-i18n="nav.contact">Contacto</a></li>
       </ul>
@@ -142,16 +143,11 @@
     <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
 
     <div class="container hero__inner">
-      <p class="pill reveal"><span class="pill__dot" aria-hidden="true"></span><span data-i18n="hero.status">Disponible para nuevas oportunidades</span></p>
 
       <h1 class="hero__title reveal" data-d="1" id="heroTitle">
-        <span class="hero__greeting" data-i18n="hero.greeting">Hola, soy</span>
-        <span class="hero__name grad-text" data-i18n="profile.name">Jose Luis C.</span>
+        <span class="hero__name grad-text" data-i18n="hero.name">Jose Luis</span>
       </h1>
-
-      <p class="hero__role reveal" data-d="2" data-i18n="profile.role">Desarrollador Python</p>
-      <p class="hero__headline reveal" data-d="3" data-i18n="hero.headline">Construyo software fiable de extremo a extremo.</p>
-      <p class="hero__intro reveal" data-d="4" data-i18n="hero.intro">[Marcador — presentación breve y precisa.]</p>
+      <p class="hero__headline reveal" data-d="3" data-i18n="hero.headline">Desarrollo software desde la arquitectura hasta la experiencia de usuario, con foco en claridad, calidad y mantenibilidad.</p>
 
 
     </div>
@@ -164,7 +160,6 @@
   <section class="section" id="about" aria-labelledby="aboutTitle">
     <div class="container">
       <header class="sec-head reveal">
-        <p class="sec-head__label" data-i18n="about.label">// Sobre mí</p>
         <h2 class="sec-head__title" id="aboutTitle" data-i18n="about.title">Una breve presentación</h2>
         <p class="sec-head__sub" data-i18n="about.subtitle">Trayectoria, intereses y mi forma de entender la ingeniería.</p>
       </header>
@@ -193,81 +188,143 @@
 
   <!-- HABILIDADES: edita aquí los diez pilares y sus herramientas. -->
   <section class="section" id="skills" aria-labelledby="skillsTitle">
+    <!-- Textura decorativa: no contiene datos reales ni se lee con lector de pantalla. -->
+    <pre class="pillars-code" aria-hidden="true"><code>from architecture import Application
+from quality import validate
+
+class Software:
+    def __init__(self, purpose):
+        self.purpose = purpose
+        self.components = []
+
+    def build(self):
+        plan = define_requirements()
+        design = create_interface(plan)
+        return implement(design)
+
+    def review(self, application):
+        validate(application)
+        return improve(application)
+
+async def workflow(context):
+    architecture = await plan(context)
+    product = await build(architecture)
+    return await verify(product)
+
+const experience = {
+    clarity: true,
+    accessibility: true,
+    maintainability: true
+};</code></pre>
     <div class="container pillars-layout">
-      <header class="pillars-heading">
-        <p class="sec-head__label" data-i18n="skills.label">// Habilidades</p>
+      <header class="pillars-heading reveal">
         <h2 class="sec-head__title" id="skillsTitle">Mis pilares</h2>
         <p>De la planificación al mantenimiento: mi forma de desarrollar aplicaciones.</p>
       </header>
       <ol class="pillars-list" lang="es">
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">01</span>
           <h3>Arquitectura y planificación</h3>
           <p>Organizo aplicaciones en componentes y defino su estructura, flujo de datos y requisitos para facilitar su evolución.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>Markdown, Mermaid, GitHub Issues</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">Markdown, Mermaid, GitHub Issues</p>
         </li>
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">02</span>
           <h3>Diseño UI/UX</h3>
           <p>Diseño interfaces claras y accesibles, con navegación intuitiva y adaptación a diferentes pantallas y formas de interacción.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>Figma, SVG, herramientas de accesibilidad del navegador</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">Figma, SVG, herramientas de accesibilidad del navegador</p>
         </li>
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">03</span>
           <h3>Frontend e interfaces</h3>
           <p>Desarrollo interfaces interactivas para aplicaciones web y de escritorio, cuidando su presentación y facilidad de uso.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>HTML5, CSS3, JavaScript, Tailwind CSS; Tkinter y ttk para escritorio</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">HTML5, CSS3, JavaScript, Tailwind CSS; Tkinter y ttk para escritorio</p>
         </li>
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">04</span>
           <h3>Backend y lógica de aplicación</h3>
           <p>Implemento reglas de negocio, validaciones y procesamiento de información en aplicaciones locales y servicios de servidor.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>Python, C#, Java, Perl; Node.js para JavaScript en servidor</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">Python, C#, Java, Perl; Node.js para JavaScript en servidor</p>
         </li>
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">05</span>
           <h3>Bases de datos y almacenamiento</h3>
           <p>Organizo, consulto y almaceno información, con mecanismos de persistencia, importación y exportación.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>SQLite, Oracle Database, IndexedDB, SQL, DBeaver; JSON para intercambio de datos</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">SQLite, Oracle Database, IndexedDB, SQL, DBeaver; JSON para intercambio de datos</p>
         </li>
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">06</span>
           <h3>APIs e integraciones</h3>
           <p>Desarrollo y conecto APIs para intercambiar información entre aplicaciones y servicios, con contratos y documentación claros.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>FastAPI, REST, GraphQL, OpenAPI, Postman</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">FastAPI, REST, GraphQL, OpenAPI, Postman</p>
         </li>
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">07</span>
           <h3>Seguridad de aplicaciones</h3>
           <p>Aplico controles de acceso y validación de entradas para proteger la información y reducir vulnerabilidades comunes.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>OWASP ZAP, herramientas de desarrollo del navegador, bibliotecas de autenticación y validación</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">OWASP ZAP, herramientas de desarrollo del navegador, bibliotecas de autenticación y validación</p>
         </li>
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">08</span>
           <h3>Pruebas y calidad</h3>
           <p>Verifico funciones y recorridos de usuario, reproduzco errores y reviso compatibilidad y rendimiento.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>pytest, unittest, Playwright, Chrome DevTools</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">pytest, unittest, Playwright, Chrome DevTools</p>
         </li>
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">09</span>
           <h3>Empaquetado y publicación</h3>
           <p>Preparo ejecutables y paquetes de distribución, y automatizo procesos de compilación y publicación según la plataforma.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>PyInstaller, .NET CLI, GitHub Actions, Docker</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">PyInstaller, .NET CLI, GitHub Actions, Docker</p>
         </li>
-        <li class="pillar">
+        <li class="pillar reveal">
           <span class="pillar__number" aria-hidden="true">10</span>
           <h3>Mantenimiento y automatización</h3>
           <p>Corrijo errores, mantengo versiones y automatizo tareas repetitivas, incluido el procesamiento de archivos y datos.</p>
-          <p class="pillar__tools"><strong>Tecnologías y herramientas</strong><br>Git, GitHub, VS Code, Python, Batch, CMD, pandas</p>
+          <p class="pillar__tools" aria-label="Tecnologías utilizadas">Git, GitHub, VS Code, Python, Batch, CMD, pandas</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <!-- IA: añade únicamente herramientas usadas y repositorios propios comprobables. -->
+  <section class="section ai-section" id="ai" aria-labelledby="aiTitle" lang="es">
+    <div class="container">
+      <header class="sec-head reveal">
+        <h2 class="sec-head__title" id="aiTitle">IA aplicada al desarrollo</h2>
+        <p class="sec-head__sub">De una idea a una implementación revisada: asistentes, criterios de ingeniería y herramientas propias.</p>
+      </header>
+      <div class="ai-grid">
+        <article class="ai-card reveal">
+          <span class="ai-card__number" aria-hidden="true">01</span>
+          <h3>Cómo la aplico</h3>
+          <p>Utilizo asistentes para estructurar requisitos, explorar soluciones, desarrollar código y preparar documentación. Reviso los cambios y distingo las pruebas ejecutadas de las comprobaciones pendientes.</p>
+          <ul class="ai-tags" aria-label="Aplicaciones"><li>Planificación</li><li>Desarrollo asistido</li><li>Revisión de código</li><li>Documentación</li></ul>
+        </article>
+        <article class="ai-card reveal" data-d="1">
+          <span class="ai-card__number" aria-hidden="true">02</span>
+          <h3>Herramientas de trabajo</h3>
+          <p>Trabajo con ChatGPT y Codex para convertir instrucciones y contexto del proyecto en cambios concretos y revisables.</p>
+          <ul class="ai-tags" aria-label="Herramientas utilizadas"><li>ChatGPT</li><li>Codex</li></ul>
+          <!-- Confirma otras herramientas antes de ampliar esta lista. -->
+        </article>
+        <article class="ai-card ai-card--featured reveal" data-d="2">
+          <span class="ai-card__number" aria-hidden="true">03</span>
+          <h3>Mi desarrollo: Knight</h3>
+          <p>Desarrollo un plugin que organiza instrucciones y habilidades de ingeniería para trabajar con asistentes de IA: planificación, revisión de código, seguridad, UX y verificación.</p>
+          <p>Su objetivo es mejorar el proceso y la trazabilidad del trabajo asistido. No es un modelo entrenado por mí ni una IA autónoma.</p>
+          <a class="ai-link" href="https://github.com/IngCaballeroPerez/Knight-Plugin" target="_blank" rel="noopener noreferrer">Explorar Knight en GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <div class="ai-reference reveal">
+        <h3>Referencias de código abierto</h3>
+        <p><a class="ai-link" href="https://github.com/QwenLM/qwen-code" target="_blank" rel="noopener noreferrer">Qwen Code <span aria-hidden="true">↗</span></a> · Repositorio externo que sigo como referencia para herramientas de desarrollo con IA.</p>
+      </div>
     </div>
   </section>
 
 <section class="section section--alt" id="projects" aria-labelledby="projTitle">
     <div class="container">
       <header class="sec-head reveal">
-        <p class="sec-head__label" data-i18n="projects.label">// Proyectos</p>
         <h2 class="sec-head__title" id="projTitle" data-i18n="projects.title">Trabajo seleccionado</h2>
         <p class="sec-head__sub" data-i18n="projects.subtitle">Selecciona una tarjeta con Tab y pulsa Intro para abrir sus detalles.</p>
       </header>
@@ -284,7 +341,6 @@
   <section class="section" id="contact" aria-labelledby="contactTitle">
     <div class="container container--narrow">
       <header class="sec-head reveal">
-        <p class="sec-head__label" data-i18n="contact.label">// Contacto</p>
         <h2 class="sec-head__title" id="contactTitle" data-i18n="contact.title">Construyamos algo</h2>
         <p class="sec-head__sub" data-i18n="contact.subtitle">Vacantes, colaboraciones o una duda técnica: escríbeme.</p>
       </header>
@@ -421,3 +477,4 @@
 <script src="js/app.js" defer></script>
 </body>
 </html>
+

@@ -48,3 +48,16 @@ En esta revisión también se comprobó la sintaxis de los scripts internos de 4
 ## Compatibilidad del repositorio
 
 `Portafolio.html` redirige a `index.html`. Los scripts antiguos `js/main.js` y `js/i18n.js` se sustituyen por `js/app.js`. Se conservan LICENSE y los recursos existentes de assets/.
+
+
+## Actualización: presentación e IA
+
+La portada muestra Jose Luis y un titular sobre arquitectura, experiencia de usuario y mantenibilidad, sobre un fondo gris azulado. Se eliminaron el saludo, estado de disponibilidad, párrafo marcador y rótulos con // de las secciones.
+
+La navegación conserva el desplazamiento suave y usa la misma transición de aparición que el scroll, también al volver a una sección. Se eliminaron fondos rectangulares de los enlaces sin retirar el foco visible de teclado. La posición de destino usa la altura real de la barra, evitando el cálculo fijo de rem a píxeles.
+
+Mis pilares incorpora código decorativo desenfocado, oculto para lectores de pantalla. El zoom y sombra al pasar el cursor son suaves y respetan movimiento reducido. Las tecnologías aparecen como texto monoespaciado sin un rótulo repetido.
+
+La sección IA diferencia uso de ChatGPT/Codex, desarrollo propio Knight y referencia externa Qwen Code. El contenido de Knight se contrastó con el README de su repositorio; no se afirma haber entrenado modelos ni se inventan métricas. Para ampliarla, confirmar otras herramientas usadas y aportar más repositorios propios.
+
+Referencias consultadas para la dirección del diseño: brittanychiang.com (presentación y proyectos), joshwcomeau.com (contenido técnico y microinteracciones), bruno-simon.com (experiencia interactiva). No se copiaron sus diseños ni activos.

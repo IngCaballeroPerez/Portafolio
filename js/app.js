@@ -26,18 +26,18 @@
     profile: { name: 'Jose Luis C.', initials: 'JLC', role: 'Desarrollador Python', email: '[tu.correo@ejemplo.com]', location: '[Ciudad, País]' },
     nav: { home: 'Inicio', about: 'Sobre mí', skills: 'Habilidades', experience: 'Experiencia', projects: 'Proyectos', contact: 'Contacto', cta: 'Hablemos' },
     social: { github: 'GitHub', linkedin: 'LinkedIn', email: 'Correo', x: 'X / Twitter' },
-    hero: { status: 'Disponible para nuevas oportunidades', greeting: 'Hola, soy',
-      headline: 'Construyo software fiable de extremo a extremo: del modelo de datos a la interfaz desplegada.',
+    hero: { name: 'Jose Luis', status: 'Disponible para nuevas oportunidades', greeting: 'Hola, soy',
+      headline: 'Desarrollo software desde la arquitectura hasta la experiencia de usuario, con foco en claridad, calidad y mantenibilidad.',
       intro: '[Marcador — sustitúyelo por una presentación breve y precisa: qué construyes, qué problemas te gusta resolver y el impacto de tu trabajo.]',
       ctaProjects: 'Ver mis proyectos', ctaContact: 'Hablemos', cv: 'Descargar CV', scroll: 'Desplázate' },
-    about: { label: '// Sobre mí', title: 'Una breve presentación', subtitle: 'Trayectoria, intereses y mi forma de entender la ingeniería.',
+    about: { label: 'Sobre mí', title: 'Una breve presentación', subtitle: 'Trayectoria, intereses y mi forma de entender la ingeniería.',
       photoPlaceholder: 'Foto de perfil', heading: '[Marcador — tu titular profesional]',
       p1: '[Marcador — tu trayectoria: cómo empezaste, qué estudiaste y en qué trabajas hoy.]',
       p2: '[Marcador — tu filosofía de ingeniería: cómo abordas el diseño, la calidad y la colaboración.]',
       p3: '[Marcador — tus objetivos y qué buscas a continuación.]',
       interestsTitle: 'Áreas de enfoque',
       interests: ['[Área de enfoque]', '[Área de enfoque]', '[Área de enfoque]', '[Área de enfoque]', '[Área de enfoque]'] },
-    skills: { label: '// Habilidades', title: 'Tecnologías y herramientas',
+    skills: { label: 'Habilidades', title: 'Tecnologías y herramientas',
       subtitle: 'Busca, filtra por categoría o pulsa una tecnología para ver qué proyectos la usan.',
       empty: 'Aún no hay habilidades registradas.',
       searchPh: 'Buscar una tecnología…', searchLabel: 'Buscar tecnología', searchClear: 'Borrar búsqueda',
@@ -47,7 +47,7 @@
       activeTech: 'Filtrando proyectos por {tech}', clearTech: 'Quitar el filtro de {tech}',
       exampleNote: 'Los datos mostrados son de ejemplo: edita el bloque DATA para poner tu stack real.',
       categories: { languages: 'Lenguajes de programación', frontend: 'Frontend', backend: 'Backend', databases: 'Bases de datos y almacenamiento', cloud: 'Nube y DevOps', tools: 'Frameworks y herramientas' } },
-    experience: { label: '// Experiencia', title: 'Trayectoria profesional', subtitle: 'Empleo, formación y certificaciones.',
+    experience: { label: 'Experiencia', title: 'Trayectoria profesional', subtitle: 'Empleo, formación y certificaciones.',
       tabListLabel: 'Categorías de experiencia', empty: 'Todavía no hay entradas — añádelas en el bloque DATA.',
       kinds: { work: 'Trabajo', education: 'Formación' },
       entries: {
@@ -55,7 +55,7 @@
         job2: { period: '[Mes Año] — [Mes Año]', title: '[Puesto anterior]', org: '[Empresa anterior]', points: ['[Marcador — responsabilidad o entrega.]', '[Marcador — resultado medible.]'] },
         edu1: { period: '[Año inicio] — [Año fin]', title: '[Titulación o programa]', org: '[Institución]', points: ['[Marcador — asignaturas relevantes, tesis o menciones.]', '[Marcador — actividades, asociaciones o premios.]'] }
       } },
-    projects: { label: '// Proyectos', title: 'Trabajo seleccionado',
+    projects: { label: 'Proyectos', title: 'Trabajo seleccionado',
       subtitle: 'Selecciona una tarjeta con Tab y pulsa Intro para abrir sus detalles.',
       hint: 'Usa Tab para seleccionar una tarjeta e Intro para abrir sus detalles. El espacio no abre tarjetas.',
       empty: 'Aún no hay proyectos configurados.', promote: 'Promover {name} al espacio destacado',
@@ -82,7 +82,7 @@
         c5: { name: '[Nombre de la certificación]', org: '[Entidad emisora]', issued: '[Fecha de emisión]', expires: '[Fecha de caducidad]' }
       },
       modal: { eyebrow: 'Credencial', issuer: 'Entidad emisora', datesTitle: 'Vigencia', dates: 'Emitido: {issued} · Caduca: {expires}', verify: 'Verificar credencial', noVerify: 'No se ha proporcionado una URL pública de verificación.' } },
-    contact: { label: '// Contacto', title: 'Construyamos algo', subtitle: 'Vacantes, colaboraciones o una duda técnica: escríbeme.',
+    contact: { label: 'Contacto', title: 'Construyamos algo', subtitle: 'Vacantes, colaboraciones o una duda técnica: escríbeme.',
       form: { name: 'Nombre', namePh: 'Tu nombre', email: 'Correo electrónico', emailPh: 'tu@ejemplo.com',
         subject: 'Asunto', subjectPh: '¿Sobre qué escribes?', message: 'Mensaje', messagePh: 'Cuéntame algo sobre el proyecto o el puesto…',
         submit: 'Enviar mensaje', sending: 'Preparando…', validating: 'Revisando tu mensaje…', loading: 'Abriendo tu aplicación de correo…',
@@ -105,18 +105,18 @@
     profile: { name: 'Jose Luis C.', initials: 'JLC', role: 'Desarrollador Python', email: '[your.email@example.com]', location: '[City, Country]' },
     nav: { home: 'Home', about: 'About', skills: 'Skills', experience: 'Experience', projects: 'Projects', contact: 'Contact', cta: 'Get in touch' },
     social: { github: 'GitHub', linkedin: 'LinkedIn', email: 'Email', x: 'X / Twitter' },
-    hero: { status: 'Open to new opportunities', greeting: 'Hi, I’m',
-      headline: 'I build reliable software end to end — from data model to deployed interface.',
+    hero: { name: 'Jose Luis', status: 'Open to new opportunities', greeting: 'Hi, I’m',
+      headline: 'I develop software from architecture to user experience, with a focus on clarity, quality and maintainability',
       intro: '[Placeholder — replace with a concise, accurate introduction: what you build, the problems you enjoy solving and the impact of your work.]',
       ctaProjects: 'Explore my projects', ctaContact: 'Get in touch', cv: 'Download CV', scroll: 'Scroll' },
-    about: { label: '// About', title: 'A short introduction', subtitle: 'Background, interests and the way I approach engineering.',
+    about: { label: 'About', title: 'A short introduction', subtitle: 'Background, interests and the way I approach engineering.',
       photoPlaceholder: 'Profile photo', heading: '[Placeholder — your professional headline]',
       p1: '[Placeholder — your background: how you started, what you studied and what you work on today.]',
       p2: '[Placeholder — your engineering philosophy: how you approach design, quality and collaboration.]',
       p3: '[Placeholder — your goals and what you are looking for next.]',
       interestsTitle: 'Focus areas',
       interests: ['[Focus area]', '[Focus area]', '[Focus area]', '[Focus area]', '[Focus area]'] },
-    skills: { label: '// Skills', title: 'Technologies & tools',
+    skills: { label: 'Skills', title: 'Technologies & tools',
       subtitle: 'Search, filter by category, or select a technology to see which projects use it.',
       empty: 'No skills listed yet.',
       searchPh: 'Search a technology…', searchLabel: 'Search technology', searchClear: 'Clear search',
@@ -126,7 +126,7 @@
       activeTech: 'Filtering projects by {tech}', clearTech: 'Clear the {tech} filter',
       exampleNote: 'The data shown is sample data: edit the DATA block to use your real stack.',
       categories: { languages: 'Programming languages', frontend: 'Frontend', backend: 'Backend', databases: 'Databases & storage', cloud: 'Cloud & DevOps', tools: 'Frameworks & tooling' } },
-    experience: { label: '// Experience', title: 'Professional journey', subtitle: 'Employment, education and certifications.',
+    experience: { label: 'Experience', title: 'Professional journey', subtitle: 'Employment, education and certifications.',
       tabListLabel: 'Experience categories', empty: 'No entries yet — add them to the DATA block.',
       kinds: { work: 'Work', education: 'Education' },
       entries: {
@@ -134,7 +134,7 @@
         job2: { period: '[Month Year] — [Month Year]', title: '[Previous Job Title]', org: '[Previous Company]', points: ['[Placeholder — responsibility or deliverable.]', '[Placeholder — measurable outcome.]'] },
         edu1: { period: '[Start Year] — [End Year]', title: '[Degree or Programme]', org: '[Institution]', points: ['[Placeholder — relevant coursework, thesis or honours.]', '[Placeholder — activities, societies or awards.]'] }
       } },
-    projects: { label: '// Projects', title: 'Selected work',
+    projects: { label: 'Projects', title: 'Selected work',
       subtitle: 'Select a card with Tab and press Enter to open its details.',
       hint: 'Tab to a card and press Enter to open its details. Space does not open cards.',
       empty: 'No projects configured yet.', promote: 'Promote {name} to the featured slot',
@@ -161,7 +161,7 @@
         c5: { name: '[Certification Name]', org: '[Issuing Organisation]', issued: '[Issue date]', expires: '[Expiry date]' }
       },
       modal: { eyebrow: 'Credential', issuer: 'Issuing organisation', datesTitle: 'Validity', dates: 'Issued: {issued} · Expires: {expires}', verify: 'Verify credential', noVerify: 'No public verification URL provided.' } },
-    contact: { label: '// Contact', title: 'Let’s build something', subtitle: 'Roles, collaborations or a technical question — write to me.',
+    contact: { label: 'Contact', title: 'Let’s build something', subtitle: 'Roles, collaborations or a technical question — write to me.',
       form: { name: 'Name', namePh: 'Your name', email: 'Email', emailPh: 'you@example.com',
         subject: 'Subject', subjectPh: 'What is this about?', message: 'Message', messagePh: 'Tell me a little about the project or role…',
         submit: 'Send message', sending: 'Preparing…', validating: 'Checking your message…', loading: 'Opening your email app…',
@@ -184,18 +184,18 @@
     profile: { name: 'Jose Luis C.', initials: 'JLC', role: 'Desarrollador Python', email: '[your.email@example.com]', location: '[城市，国家]' },
     nav: { home: '首页', about: '关于我', skills: '技术栈', experience: '经历', projects: '项目', contact: '联系', cta: '与我联系' },
     social: { github: 'GitHub', linkedin: '领英', email: '邮箱', x: 'X / Twitter' },
-    hero: { status: '可接受新的工作机会', greeting: '你好，我是',
-      headline: '我从数据模型到上线界面，端到端地构建可靠的软件。',
+    hero: { name: 'Jose Luis', status: '可接受新的工作机会', greeting: '你好，我是',
+      headline: '从架构到用户体验，我注重清晰、质量与可维护性。',
       intro: '[占位内容 —— 请替换为简明准确的自我介绍：你构建什么、乐于解决哪些问题、以及你的工作带来的影响。]',
       ctaProjects: '浏览我的项目', ctaContact: '与我联系', cv: '下载简历', scroll: '向下滚动' },
-    about: { label: '// 关于我', title: '简短介绍', subtitle: '我的背景、兴趣，以及我对工程的理解。',
+    about: { label: '关于我', title: '简短介绍', subtitle: '我的背景、兴趣，以及我对工程的理解。',
       photoPlaceholder: '个人照片', heading: '[占位内容 —— 你的职业标题]',
       p1: '[占位内容 —— 你的背景：如何入行、学习经历以及目前的工作方向。]',
       p2: '[占位内容 —— 你的工程理念：你如何看待设计、质量与协作。]',
       p3: '[占位内容 —— 你的目标，以及下一步希望做的事。]',
       interestsTitle: '关注领域',
       interests: ['[关注领域]', '[关注领域]', '[关注领域]', '[关注领域]', '[关注领域]'] },
-    skills: { label: '// 技术栈', title: '技术与工具',
+    skills: { label: '技术栈', title: '技术与工具',
       subtitle: '可以搜索、按分类筛选，或点击某项技术查看使用它的项目。',
       empty: '尚未填写技术栈。',
       searchPh: '搜索某项技术…', searchLabel: '搜索技术', searchClear: '清除搜索',
@@ -205,7 +205,7 @@
       activeTech: '正在按 {tech} 筛选项目', clearTech: '取消 {tech} 筛选',
       exampleNote: '当前显示的是示例数据：请编辑 DATA 代码块填入你真实的技术栈。',
       categories: { languages: '编程语言', frontend: '前端开发', backend: '后端开发', databases: '数据库与存储', cloud: '云与 DevOps', tools: '框架与工具' } },
-    experience: { label: '// 经历', title: '职业历程', subtitle: '工作、教育与认证。',
+    experience: { label: '经历', title: '职业历程', subtitle: '工作、教育与认证。',
       tabListLabel: '经历分类', empty: '暂无条目 —— 请在 DATA 代码块中添加。',
       kinds: { work: '工作', education: '教育' },
       entries: {
@@ -213,7 +213,7 @@
         job2: { period: '[年份 月份] — [年份 月份]', title: '[上一份职位]', org: '[上一家公司]', points: ['[占位内容 —— 职责或交付物。]', '[占位内容 —— 可衡量的结果。]'] },
         edu1: { period: '[起始年份] — [结束年份]', title: '[学位或专业]', org: '[学校名称]', points: ['[占位内容 —— 相关课程、毕业论文或荣誉。]', '[占位内容 —— 社团活动、组织或奖项。]'] }
       } },
-    projects: { label: '// 项目', title: '精选作品',
+    projects: { label: '项目', title: '精选作品',
       subtitle: '使用 Tab 选择卡片，然后按回车键查看详情。',
       hint: '提示：使用 Tab 键选中卡片，回车键查看详情，通过提升按钮将其与主展示位互换。',
       empty: '尚未配置项目。', promote: '将 {name} 提升至主展示位',
@@ -240,7 +240,7 @@
         c5: { name: '[认证名称]', org: '[发证机构]', issued: '[发证日期]', expires: '[到期日期]' }
       },
       modal: { eyebrow: '凭证', issuer: '发证机构', datesTitle: '有效期', dates: '发证日期：{issued} · 到期日期：{expires}', verify: '验证凭证', noVerify: '暂无公开的凭证验证链接。' } },
-    contact: { label: '// 联系', title: '一起做点东西', subtitle: '无论是职位机会、合作，还是技术问题，都欢迎来信。',
+    contact: { label: '联系', title: '一起做点东西', subtitle: '无论是职位机会、合作，还是技术问题，都欢迎来信。',
       form: { name: '姓名', namePh: '您的姓名', email: '邮箱', emailPh: 'you@example.com',
         subject: '主题', subjectPh: '这封邮件关于什么？', message: '留言', messagePh: '简单介绍一下项目或职位…',
         submit: '发送留言', sending: '正在准备…', validating: '正在检查您的留言…', loading: '正在打开您的邮件应用…',
@@ -489,19 +489,19 @@
   function observeReveals(scope) {
     var nodes = $$('.reveal', scope || document);
     if (scope && scope.nodeType === 1 && scope.classList.contains('reveal')) nodes.unshift(scope);
-    if (!('IntersectionObserver' in window)) { nodes.forEach(function (n) { n.classList.add('is-in'); }); return; }
+    if (!('IntersectionObserver' in window) || reduceMotion) {
+      nodes.forEach(function (node) { node.classList.add('is-in'); });
+      return;
+    }
     if (!revealIO) {
+      // The same visibility transition applies to wheel scrolling and anchor navigation.
       revealIO = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); revealIO.unobserve(en.target); } });
+        entries.forEach(function (entry) {
+          entry.target.classList.toggle('is-in', entry.isIntersecting);
+        });
       }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
     }
-    var instant = [];
-    nodes.forEach(function (n) {
-      if (n.classList.contains('is-in')) return;
-      var r = n.getBoundingClientRect();
-      if (r.top < window.innerHeight && r.bottom > 0) instant.push(n); else revealIO.observe(n);
-    });
-    if (instant.length) window.requestAnimationFrame(function () { instant.forEach(function (n) { n.classList.add('is-in'); }); });
+    nodes.forEach(function (node) { revealIO.observe(node); });
   }
 
   /* ─────────── PROGRESO DE SCROLL ─────────── */
@@ -1258,7 +1258,7 @@
     var target = document.querySelector(id);
     if (!target) return;
     e.preventDefault();
-    var navH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) * 16 || 66;
+    var navH = document.getElementById('nav').getBoundingClientRect().height;
     var top = target.getBoundingClientRect().top + window.scrollY - (navH + 18);
     window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? 'auto' : 'smooth' });
     if (window.history && history.replaceState) history.replaceState(null, '', id);
@@ -1348,3 +1348,4 @@
   window.addEventListener('resize', measureLayers, { passive: true });
   measureLayers();
 })();
+

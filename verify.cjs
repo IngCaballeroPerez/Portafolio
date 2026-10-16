@@ -80,3 +80,43 @@ for (const name of ['index.html', 'experiencia.html', '404.html']) {
 const styles = fs.readFileSync(__dirname + '/css/styles.css', 'utf8');
 assert(styles.includes('grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr)'));
 console.log('OK: one stylesheet, one application script, centered navigation and removed brands.');
+
+
+const home = fs.readFileSync(__dirname + '/index.html', 'utf8');
+const hero = home.slice(home.indexOf('id="hero"'), home.indexOf('id="contentCard"'));
+assert(hero.includes('>Jose Luis</span>'));
+assert(!hero.includes('[Marcador'));
+assert(!hero.includes('hero__greeting'));
+assert(!home.includes('<strong>Tecnologías y herramientas</strong>'));
+assert(home.includes('id="ai"'));
+assert(home.includes('aria-hidden="true"><code>'));
+assert(!home.includes('class="sec-head__label"'));
+console.log('OK: simplified hero, decorative code, AI section and clean section headings.');
+
+// The reveal observer repeats the same transition on re-entry.
+let revealCallback;
+const revealed = new Set();
+const revealNode = { classList: {
+  contains() { return true; },
+  add(value) { revealed.add(value); },
+  toggle(value, state) { if (state) revealed.add(value); else revealed.delete(value); }
+} };
+context.$$ = () => [revealNode];
+context.IntersectionObserver = function (callback) {
+  revealCallback = callback;
+  this.observe = function () {};
+};
+context.window.IntersectionObserver = context.IntersectionObserver;
+context.reduceMotion = false;
+vm.runInContext(source.slice(source.indexOf('  var revealIO ='), source.indexOf('  /* ─────────── PROGRESO')), context);
+context.observeReveals();
+revealCallback([{ target: revealNode, isIntersecting: true }]);
+assert(revealed.has('is-in'));
+revealCallback([{ target: revealNode, isIntersecting: false }]);
+assert(!revealed.has('is-in'));
+revealCallback([{ target: revealNode, isIntersecting: true }]);
+assert(revealed.has('is-in'));
+context.reduceMotion = true;
+context.observeReveals();
+assert(revealed.has('is-in'));
+console.log('OK: reveal on entry and re-entry, with reduced-motion fallback.');
